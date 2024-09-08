@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    background-color: #333;
+    padding: 5px; /* Adds padding for better clickable area */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block; /* Makes the entire link area clickable */
+    padding: 10px; /* Ensures hover effect covers the full area */
+    border-radius: 5px; /* Ensures hover applies rounded corners */
+}
+
+nav ul li a:hover {
+    background-color: #fff; /* Changes background color on hover */
+    color: #333; /* Changes text color on hover */
+}
+
+section {
+    padding: 2rem;
+    margin: 4rem auto 1rem auto; /* Centered content with space for header */
+    max-width: 800px; /* Maximum width for sections */
+    width: 100%; /* Ensure section takes full width up to max-width */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
