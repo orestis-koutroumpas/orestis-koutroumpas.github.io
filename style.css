@@ -26,29 +26,29 @@ nav ul {
 nav ul li {
     margin: 0 15px;
     background-color: #333;
-    padding: 5px; /* Adds padding for better clickable area */
-    border-radius: 5px; /* Optional: Rounded corners */
+    padding: 5px; 
+    border-radius: 5px; 
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    display: block; /* Makes the entire link area clickable */
-    padding: 10px; /* Ensures hover effect covers the full area */
-    border-radius: 5px; /* Ensures hover applies rounded corners */
+    display: block; 
+    padding: 10px; 
+    border-radius: 5px; 
 }
 
 nav ul li a:hover {
-    background-color: #fff; /* Changes background color on hover */
-    color: #333; /* Changes text color on hover */
+    background-color: #fff;
+    color: #333; 
 }
 
 section {
     padding: 2rem;
-    margin: 4rem auto 1rem auto; /* Centered content with space for header */
-    max-width: 800px; /* Maximum width for sections */
-    width: 100%; /* Ensure section takes full width up to max-width */
+    margin: 4rem auto 1rem auto;
+    max-width: 800px; 
+    width: 100%; 
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
