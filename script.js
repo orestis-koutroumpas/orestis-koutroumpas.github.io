@@ -1,4 +1,3 @@
-// Highlight active menu item on scroll
 window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('nav ul li a');
