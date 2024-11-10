@@ -21,6 +21,7 @@ const navItems = [
     { href: '#education', text: 'Education' },
     { href: '#experience', text: 'Experience' },
     { href: '#skills', text: 'Skills' },
+    { href: '#volunteering', text: 'Volunteering' },
     { href: '#contact', text: 'Contact' }
 ];
 
@@ -84,29 +85,34 @@ skillsSection.innerHTML = `
     </ul>
     <h3>IT Skills</h3>
     <ul>
-        <li>Advanced knowledge of SQL and NoSQL (MongoDB) Database Systems</li>
-        <li>Strong command of Artificial Intelligence principles</li>
-        <li>Understanding of Machine Learning concepts and techniques</li>
-        <li>Fundamental knowledge of Algorithms and Data Structures</li>
-        <li>Familiarity with Computer Networks (TCP-IP)</li>
-        <li>Essential Knowledge of Windows, Unix and Microsoft Office</li>
-        <li>Programming Languages: Python, JavaScript, HTML, C, Java</li>
+        <li>Database Systems: Advanced knowledge of SQL and NoSQL (MongoDB)</li>
+        <li>Machine Learning: Strong command of machine learning concepts and techniques</li>
+        <li>Computer Networks: Familiarity with computer networks (TCP/IP)</li>
+        <li>Operating Systems: Proficient in Windows, Unix/Linux environments</li>
+        <li>Programming Languages: Python, JavaScript, HTML, C, Java, C++</li>
         <li>Web Development: Strong foundation in HTML, CSS, JavaScript, Node.js, Express.js</li>
         <li>Version Control: Git, GitHub</li>
-        <li>Systems: MATLAB, Autodesk AutoCAD</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul>
-        <li>Adaptability</li>
-        <li>Collaboration</li>
-        <li>Problem Solving</li>
-        <li>Time Management</li>
-        <li>Decision Making</li>
-        <li>Creativity</li>
+        <li>UX/UI Design: Knowledge of UX principles, wireframing, and design tools for creating user-centered designs</li>
+        <li>Graphics Programming: Experience with C++ and OpenGL for graphics development</li>
+        <li>Systems: MATLAB, Autodesk AutoCAD and other design and engineering software</li>
+        <li>Productivity Tools: Microsoft Office Suite (Word, Excel, PowerPoint)</li>
     </ul>
 `;
 document.body.appendChild(skillsSection);
 
+
+// Volunteering section
+const volunteeringSection = document.createElement('section');
+skillsSection.setAttribute('id', 'volunteering');
+skillsSection.innerHTML = `
+    <h2>VOLUNTEERING</h2>
+    <p><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024br>
+    <ul>
+        <li>Assisted participants, speakers, and mentors with logistics and troubleshooting</li>
+        <li>Supported event setup, organization, and networking sessions</li>
+    </ul>
+`;
+document.body.appendChild(volunteeringSection);
 // Contact section
 const contactSection = document.createElement('section');
 contactSection.setAttribute('id', 'contact');
