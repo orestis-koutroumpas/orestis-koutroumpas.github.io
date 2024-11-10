@@ -100,7 +100,6 @@ skillsSection.innerHTML = `
 `;
 document.body.appendChild(skillsSection);
 
-
 // Volunteering section
 const volunteeringSection = document.createElement('section');
 skillsSection.setAttribute('id', 'volunteering');
@@ -113,6 +112,7 @@ skillsSection.innerHTML = `
     </ul>
 `;
 document.body.appendChild(volunteeringSection);
+
 // Contact section
 const contactSection = document.createElement('section');
 contactSection.setAttribute('id', 'contact');
