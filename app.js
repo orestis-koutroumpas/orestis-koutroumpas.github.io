@@ -105,7 +105,7 @@ const volunteeringSection = document.createElement('section');
 volunteeringSection.setAttribute('id', 'volunteering');
 volunteeringSection.innerHTML = `
     <h2>Volunteering</h2>
-    <p><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024<br>
+    <p><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024</p>
     <ul>
         <li>Assisted participants, speakers, and mentors with logistics and troubleshooting</li>
         <li>Supported event setup, organization, and networking sessions</li>
