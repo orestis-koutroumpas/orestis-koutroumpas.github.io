@@ -42,7 +42,7 @@ const aboutSection = document.createElement('section');
 aboutSection.setAttribute('id', 'about');
 aboutSection.innerHTML = `
     <h2>About Me</h2>
-    <p>As an undergraduate student in Electrical and Computer Engineering, I am seeking opportunities within my field of study, with a particular interest in machine learning and human-computer interaction (HCI). I am drawn to these areas because of their transformative potential in reshaping industries and redefining how humans interact with technology. Machine learning’s ability to drive intelligent systems, combined with human-computer interaction’s focus on optimizing user experience, offers exciting opportunities to innovate and push the boundaries of what’s possible in engineering. I am eager to explore their practical applications, leveraging my background in electrical and computer engineering principles and software development to create meaningful solutions to real-world challenges. Engaging in projects that integrate machine learning and HCI will allow me to expand my expertise and contribute to these rapidly evolving fields.</p>
+    <p>Driven undergraduate student in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like machine learning, human-computer interaction (HCI), and high-performance computing systems. Skilled in software development, data analysis, and computational problem-solving, with a keen interest in exploring practical applications of advanced technologies.</p>
 `;
 document.body.appendChild(aboutSection);
 
@@ -62,13 +62,14 @@ const experienceSection = document.createElement('section');
 experienceSection.setAttribute('id', 'experience');
 experienceSection.innerHTML = `
     <h2>Professional Experience</h2>
-    <h3>IT Department, Cooperative Bank of Chania, Chania, Greece</h3>
+    <h3>IT Intern</h3>
+    <h4>Cooperative Bank of Chania, Chania, Greece</h4>
     <p><em>July 2023 – August 2023</em></p>
     <ul>
-        <li>Provided first-level support to end-users digitally and in-person.</li>
-        <li>Diagnosed and resolved hardware and software issues.</li>
-        <li>Managed user accounts and permissions, ensuring data security and compliance.</li>
-        <li>Conducted system updates and patches, minimizing system vulnerabilities.</li>
+        <li>Delivered first-level technical support to end-users, resolving hardware and software issues efficiently.</li>
+        <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
+        <li>Managed user accounts and permissions to ensure data security and compliance with organizational policies.</li>
+        <li>Enhanced productivity by maintaining and troubleshooting IT infrastructure.</li>
     </ul>
 `;
 document.body.appendChild(experienceSection);
@@ -78,24 +79,34 @@ const skillsSection = document.createElement('section');
 skillsSection.setAttribute('id', 'skills');
 skillsSection.innerHTML = `
     <h2>Skills &amp Competences</h2>
+    <h3>Engineering &amp Scientific Expertise</h3>
+    <ul>
+        <li>Strong foundation in mathematics (calculus, linear algebra, probability) and physics (electromagnetism, quantum physics).</li>
+        <li>Proficient in problem-solving and analytical techniques for engineering challenges.</li>
+    </ul>
+    <h3>Programming &amp Development</h3>
+    <ul>
+        <li?Languages: Python, JavaScript, C, C++, Java</li>
+        <li>Web Development: HTML, CSS, JavaScript, Node.js, Express.js</li>
+        <li>Version Control: Git, GitHub</li>
+    </ul>
+    <h3>Technical Expertise</h3>
+    <ul>
+        <li>Machine Learning: Strong understanding of algorithms, model building, and deployment</li>
+        <li>Graphics Programming: C++ and OpenGL for advanced visualizations</li>
+        <li>Database Systems: Proficient in SQL and NoSQL (MongoDB)</li>
+        <li>Computer Networks: TCP/IP protocols and configuration</li>
+        <li>Operating Systems: Windows, Unix/Linux</li>
+    </ul>
+    <h3>Design & Engineering Tools</h3>
+    <ul>
+        <li>UX/UI Design: Wireframing, prototyping, and design tools for user-centered solutions</li>
+        <li>Simulation & CAD: MATLAB, Autodesk AutoCAD</li>
+    </ul>
     <h3>Languages</h3>
     <ul>
         <li>Greek: Native</li>
-        <li>English: C2 (Michigan Proficiency)</li>
-    </ul>
-    <h3>IT Skills</h3>
-    <ul>
-        <li>Database Systems: Advanced knowledge of SQL and NoSQL (MongoDB)</li>
-        <li>Machine Learning: Strong command of machine learning concepts and techniques</li>
-        <li>Computer Networks: Familiarity with computer networks (TCP/IP)</li>
-        <li>Operating Systems: Proficient in Windows, Unix/Linux environments</li>
-        <li>Programming Languages: Python, JavaScript, HTML, C, Java, C++</li>
-        <li>Web Development: Strong foundation in HTML, CSS, JavaScript, Node.js, Express.js</li>
-        <li>Version Control: Git, GitHub</li>
-        <li>UX/UI Design: Knowledge of UX principles, wireframing, and design tools for creating user-centered designs</li>
-        <li>Graphics Programming: Experience with C++ and OpenGL for graphics development</li>
-        <li>Systems: MATLAB, Autodesk AutoCAD and other design and engineering software</li>
-        <li>Productivity Tools: Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+        <li>English: C2 Proficiency (Michigan Proficiency)</li>
     </ul>
 `;
 document.body.appendChild(skillsSection);
@@ -104,11 +115,16 @@ document.body.appendChild(skillsSection);
 const volunteeringSection = document.createElement('section');
 volunteeringSection.setAttribute('id', 'volunteering');
 volunteeringSection.innerHTML = `
-    <h2>Volunteering</h2>
-    <p><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024</p>
+    <h2>Volunteering &amp Extracurricular Activities</h2>
+    <h3><i>Startup Universe 2024</i> | Virtual | November 2024</h3>
     <ul>
-        <li>Assisted participants, speakers, and mentors with logistics and troubleshooting</li>
-        <li>Supported event setup, organization, and networking sessions</li>
+        <li>Identified and recruited field experts to mentor Greek tech startups participating in the Startup Universe program.</li>
+        <li>Maintained a structured database of recruited experts using Excel, ensuring accurate tracking and follow-up.</li>
+    </ul>
+    <h3><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024</h3>
+    <ul>
+        <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
+        <li>Facilitated networking sessions and communication between attendees, speakers, and mentors.</li>
     </ul>
 `;
 document.body.appendChild(volunteeringSection);
