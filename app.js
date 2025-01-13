@@ -19,9 +19,10 @@ const ul = document.createElement('ul');
 const navItems = [
     { href: '#about', text: 'About Me' },
     { href: '#education', text: 'Education' },
-    { href: '#experience', text: 'Experience' },
-    { href: '#skills', text: 'Skills' },
-    { href: '#volunteering', text: 'Volunteering' },
+    { href: '#projects', text: 'Projects' },
+    { href: '#experience', text: 'Professional Experience' },
+    { href: '#skills', text: 'Skills &amp Competencies' },
+    { href: '#volunteering', text: 'Volunteering &amp Extracurricular Activities' },
     { href: '#contact', text: 'Contact' }
 ];
 
@@ -42,8 +43,8 @@ const aboutSection = document.createElement('section');
 aboutSection.setAttribute('id', 'about');
 aboutSection.innerHTML = `
     <h2>About Me</h2>
-    <p>Driven undergraduate student in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like machine learning, human-computer interaction (HCI), and high-performance computing systems. Skilled in software development, data analysis, and computational problem-solving, with a keen interest in exploring practical applications of advanced technologies.</p>
-`;
+    <p>Undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like human-computer interaction (HCI), machine learning, and high-performance computing systems. Skilled in software development, data analysis, and computational problem-solving, with a keen interest in exploring practical applications of advanced technologies. Currently seeking a challenging field of study experience that will allow for expansion of knowledge and skills.</p>`
+    ;
 document.body.appendChild(aboutSection);
 
 // Education section
@@ -56,6 +57,28 @@ educationSection.innerHTML = `
     Major: Computers (Software &amp Hardware)</p>
 `;
 document.body.appendChild(educationSection);
+
+// Projects section
+const projectsSection = document.createElement('section');
+projectsSection.setAttribute('id', 'projects');
+projectsSection.innerHTML = `
+    <h2>Projects</h2>
+    <h3>Foodies</h3>
+    <p>Full-stack web application simulating the complete process of placing and managing delivery orders, built with Handlebars, CSS, JavaScript, and Node.js.</p>
+    <h3>Numerical Solution of Schrödinger Equation</h3>
+    <p>Computational program solving the one-dimensional time-independent Schrödinger equation using the finite-difference method, written in Python.</p>
+    <h3>Classic 8-ball pool</h3>
+    <p>3D billiard game with realistic physics, collision detection, and user controls, developed using C++ and OpenGL.</p>
+    <h3>Rock Paper Scissors</h3>
+    <p>Rock-paper-scissors game utilizing camera-based hand gesture recognition and providing real-time haptic and visual feedback, implemented in Python.</p>
+    <h3>Zoo DBMS</h3>
+    <p>Graphical user interface-based database management system for zoo operations, including management of animals and staff, built with Python and SQLite.</p>
+    <h3>Sudoku Solver</h3>
+    <p>Program solving Sudoku puzzles of various sizes using linear programming principles and backtracking algorithms, developed in Python.</p>
+    <h3>MyScanner</h3>
+    <p>Record scanning application, designed in Figma.</p>
+`;
+document.body.appendChild(projectsSection);
 
 // Experience section
 const experienceSection = document.createElement('section');
@@ -70,6 +93,7 @@ experienceSection.innerHTML = `
         <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
         <li>Managed user accounts and permissions to ensure data security and compliance with organizational policies.</li>
         <li>Enhanced productivity by maintaining and troubleshooting IT infrastructure.</li>
+        <li>IT infrastructure monitoring and setup (Microsoft Office 365 , Teams, Printers, Network, security tools, routers, switches, software)</li>
     </ul>
 `;
 document.body.appendChild(experienceSection);
@@ -81,8 +105,10 @@ skillsSection.innerHTML = `
     <h2>Skills &amp Competences</h2>
     <h3>Engineering &amp Scientific Expertise</h3>
     <ul>
-        <li>Strong foundation in mathematics (calculus, linear algebra, probability) and physics (electromagnetism, quantum physics).</li>
+        <li>Strong foundation in mathematics (calculus, linear algebra, differential equations, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
+        <li>Possess advanced knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
         <li>Proficient in problem-solving and analytical techniques for engineering challenges.</li>
+        <li>Solid understanding of quantum computing concepts and algorithms.</li>
     </ul>
     <h3>Programming &amp Development</h3>
     <ul>
@@ -95,13 +121,14 @@ skillsSection.innerHTML = `
         <li>Machine Learning: Strong understanding of algorithms, model building, and deployment</li>
         <li>Graphics Programming: C++ and OpenGL for advanced visualizations</li>
         <li>Database Systems: Proficient in SQL and NoSQL (MongoDB)</li>
-        <li>Computer Networks: TCP/IP protocols and configuration</li>
+        <li>Computer Networks: TCP/IP protocols, configuration, and network architecture</li>
         <li>Operating Systems: Windows, Unix/Linux</li>
+        <li>Computer &amp Network Security: Knowledge of network security principles, threat mitigation, and secure communication protocols</li>
     </ul>
-    <h3>Design & Engineering Tools</h3>
+    <h3>Design &amp Engineering Tools</h3>
     <ul>
-        <li>UX/UI Design: Wireframing, prototyping, and design tools for user-centered solutions</li>
-        <li>Simulation & CAD: MATLAB, Autodesk AutoCAD</li>
+        <li>UX/UI Design: Wireframing, prototyping, user research, and evaluation techniques for creating user-centered solutions.</li>
+        <li>Simulation &amp CAD: MATLAB, Autodesk AutoCAD</li>
     </ul>
     <h3>Languages</h3>
     <ul>
@@ -126,6 +153,7 @@ volunteeringSection.innerHTML = `
         <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
         <li>Facilitated networking sessions and communication between attendees, speakers, and mentors.</li>
     </ul>
+    <h3><i>Soft Skills Academy 6</i> - Creativity | Patra | May 2022</h3>
 `;
 document.body.appendChild(volunteeringSection);
 
