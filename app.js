@@ -20,9 +20,9 @@ const navItems = [
     { href: '#about', text: 'About Me' },
     { href: '#education', text: 'Education' },
     { href: '#projects', text: 'Projects' },
-    { href: '#experience', text: 'Professional Experience' },
-    { href: '#skills', text: 'Skills &amp Competencies' },
-    { href: '#volunteering', text: 'Volunteering &amp Extracurricular Activities' },
+    { href: '#experience', text: 'Experience' },
+    { href: '#skills', text: 'Skills' },
+    { href: '#volunteering', text: 'Volunteering' },
     { href: '#contact', text: 'Contact' }
 ];
 
@@ -65,16 +65,22 @@ projectsSection.innerHTML = `
     <h2>Projects</h2>
     <h3>Foodies</h3>
     <p>Full-stack web application simulating the complete process of placing and managing delivery orders, built with Handlebars, CSS, JavaScript, and Node.js.</p>
+    <br>
     <h3>Numerical Solution of Schrödinger Equation</h3>
     <p>Computational program solving the one-dimensional time-independent Schrödinger equation using the finite-difference method, written in Python.</p>
+    <br>
     <h3>Classic 8-ball pool</h3>
     <p>3D billiard game with realistic physics, collision detection, and user controls, developed using C++ and OpenGL.</p>
+    <br>
     <h3>Rock Paper Scissors</h3>
     <p>Rock-paper-scissors game utilizing camera-based hand gesture recognition and providing real-time haptic and visual feedback, implemented in Python.</p>
+    <br>
     <h3>Zoo DBMS</h3>
     <p>Graphical user interface-based database management system for zoo operations, including management of animals and staff, built with Python and SQLite.</p>
+    <br>
     <h3>Sudoku Solver</h3>
     <p>Program solving Sudoku puzzles of various sizes using linear programming principles and backtracking algorithms, developed in Python.</p>
+    <br>
     <h3>MyScanner</h3>
     <p>Record scanning application, designed in Figma.</p>
 `;
