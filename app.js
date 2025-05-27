@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     aboutSection.setAttribute('id', 'about');
     aboutSection.innerHTML = `
         <h2>About Me</h2>
-        <p>I am an undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like human-computer interaction (HCI), machine learning, and and quantum computing. Skilled in software development, data analysis, and computational problem-solving, I am eager to explore practical applications of these advanced technologies. Currently seeking a challenging field of study experience that will further expand my knowledge and skill set in these dynamic areas. 
+        <p>I am an undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like human-computer interaction (HCI), machine learning, and quantum computing. Skilled in software development, data analysis, and computational problem-solving, I am eager to explore practical applications of these advanced technologies. Currently seeking a challenging field of study experience that will further expand my knowledge and skill set in these dynamic areas. 
         </p> `
         ;
     document.body.appendChild(aboutSection);
