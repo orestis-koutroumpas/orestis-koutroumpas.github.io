@@ -96,82 +96,81 @@ document.addEventListener("DOMContentLoaded", function() {
     projectsSection.innerHTML = `
     <h2>Projects</h2>
     <div class="projects-grid">
-<div class="project-card">
-  <h3>Classic 8-Ball Pool</h3>
-  <p><span class="tech">C++, OpenGL</span> | Dec 2024 – Feb 2025</p>
-  <ul>
-    <li>Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Classic-8-Ball-Pool" target="_blank">Classic 8-Ball Pool</a></h3>
+        <p><span class="tech">C++, OpenGL</span> | Dec 2024 – Feb 2025</p>
+        <ul>
+          <li>Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>MyScanner</h3>
-  <p><span class="tech">Figma</span> | Dec 2024 – Jan 2025</p>
-  <ul>
-    <li>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.</li>
-    <li>Redesigned workflows from existing apps, improving efficiency by 40%.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://www.figma.com/proto/9p84KSrzTdfuToZyJyjYlX/My-Scanner?node-id=165-7141&p=f&t=2jWoCvHcmG3MXPBM-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=165%3A7141" target="_blank">MyScanner</a></h3>
+        <p><span class="tech">Figma</span> | Dec 2024 – Jan 2025</p>
+        <ul>
+          <li>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.</li>
+          <li>Redesigned workflows from existing apps, improving efficiency by 40%.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>Gesture Rock Paper Scissors</h3>
-  <p><span class="tech">Python, OpenCV, MediaPipe</span> | Dec 2024 – Jan 2025</p>
-  <ul>
-    <li>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Gesture-Rock-Paper-Scissors" target="_blank">Gesture Rock Paper Scissors</a></h3>
+        <p><span class="tech">Python, OpenCV, MediaPipe</span> | Dec 2024 – Jan 2025</p>
+        <ul>
+          <li>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>GANs for Inpainting & Reconstruction</h3>
-  <p><span class="tech">Python, NumPy, Matplotlib</span> | Dec 2024</p>
-  <ul>
-    <li>Used a trained GAN to reconstruct MNIST digit '8' from random noise vectors and partial input masks.</li>
-    <li>Optimized latent input via gradient descent to improve reconstruction fidelity.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Inpainting" target="_blank">GANs for Inpainting & Reconstruction</a></h3>
+        <p><span class="tech">Python, NumPy, Matplotlib</span> | Dec 2024</p>
+        <ul>
+          <li>Used a trained GAN to reconstruct MNIST digit '8' from random noise vectors and partial input masks.</li>
+          <li>Optimized latent input via gradient descent to improve reconstruction fidelity.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>MNIST Classifier</h3>
-  <p><span class="tech">Python, TensorFlow, NumPy</span> | Nov 2024</p>
-  <ul>
-    <li>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database.</li>
-    <li>Achieved 99% accuracy.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Classifier" target="_blank">MNIST Classifier</a></h3>
+        <p><span class="tech">Python, TensorFlow, NumPy</span> | Nov 2024</p>
+        <ul>
+          <li>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database.</li>
+          <li>Achieved 99% accuracy.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>Sudoku Solver</h3>
-  <p><span class="tech">Python, PuLP</span> | Sep 2024</p>
-  <ul>
-    <li>Engineered a Sudoku solver using backtracking and linear programming techniques for arbitrary grid sizes.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Sudoku-Solver" target="_blank">Sudoku Solver</a></h3>
+        <p><span class="tech">Python, PuLP</span> | Sep 2024</p>
+        <ul>
+          <li>Engineered a Sudoku solver using backtracking and linear programming techniques for arbitrary grid sizes.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>Foodies</h3>
-  <p><span class="tech">JavaScript, Node.js, Handlebars, CSS, SQLite</span> | Apr 2024 – Jun 2024</p>
-  <ul>
-    <li>Built a full-stack food ordering platform simulating delivery, cart, and order management systems.</li>
-    <li>Applied MVC architecture for modular design.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Foodies" target="_blank">Foodies</a></h3>
+        <p><span class="tech">JavaScript, Node.js, Handlebars, CSS, SQLite</span> | Apr 2024 – Jun 2024</p>
+        <ul>
+          <li>Built a full-stack food ordering platform simulating delivery, cart, and order management systems.</li>
+          <li>Applied MVC architecture for modular design.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>Quantum Solver</h3>
-  <p><span class="tech">Python, NumPy</span> | Jan 2024</p>
-  <ul>
-    <li>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</li>
-  </ul>
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/Numerical-Solution-of-Schrodinger-Equation" target="_blank">Numerical Solution of Schrödinger Equation</a></h3>
+        <p><span class="tech">Python, NumPy</span> | Jan 2024</p>
+        <ul>
+          <li>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</li>
+        </ul>
+      </div>
 
-<div class="project-card">
-  <h3>Zoo DBMS</h3>
-  <p><span class="tech">Python, SQLite</span> | Dec 2023 – Jan 2024</p>
-  <ul>
-    <li>GUI-based database management system for zoo operations, built with Python and SQLite.</li>
-  </ul>
-</div>
-
+      <div class="project-card">
+        <h3><a href="https://github.com/orestis-koutroumpas/ZOO-DBMS" target="_blank">Zoo DBMS</a></h3>
+        <p><span class="tech">Python, SQLite</span> | Dec 2023 – Jan 2024</p>
+        <ul>
+          <li>GUI-based database management system for zoo operations, built with Python and SQLite.</li>
+        </ul>
+      </div>
 
     </div>
     `;

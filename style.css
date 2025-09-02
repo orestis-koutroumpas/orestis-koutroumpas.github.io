@@ -149,6 +149,19 @@ section > div[class$='-card'] ul li {
 }
 
 /* =========================
+   PROJECT TITLES LINKS
+   ========================= */
+.project-card h3 a {
+    color: #000; /* black */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-card h3 a:hover {
+    text-decoration: underline; /* optional: underline on hover for feedback */
+}
+
+/* =========================
    CONTACT SECTION
    ========================= */
 #contact {
