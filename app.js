@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <link rel="stylesheet" href="style.css">
     `;
     
-    // Create header and navigation
+    // Header and navigation
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
     h1.textContent = 'Orestis Koutroumpas';
@@ -40,113 +40,106 @@ document.addEventListener("DOMContentLoaded", function() {
     header.appendChild(nav);
     document.body.appendChild(header);
     
-    // About section
+    // About section (unchanged)
     const aboutSection = document.createElement('section');
     aboutSection.setAttribute('id', 'about');
     aboutSection.innerHTML = `
         <h2>About Me</h2>
-        <p>I am an undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like human-computer interaction (HCI), machine learning, and quantum computing. Skilled in software development, data analysis, and computational problem-solving, I am eager to explore practical applications of these advanced technologies. Currently seeking a challenging field of study experience that will further expand my knowledge and skill set in these dynamic areas. 
-        </p> `
-        ;
+        <p>I am an undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like human-computer interaction (HCI), machine learning, and quantum computing. Skilled in software development, data analysis, and computational problem-solving, I am eager to explore practical applications of these advanced technologies. Currently seeking a challenging field of study experience that will further expand my knowledge and skill set in these dynamic areas.</p>
+    `;
     document.body.appendChild(aboutSection);
     
-    // Education section
+    // Education section (updated)
     const educationSection = document.createElement('section');
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = `
         <h2>Education</h2>
-        <p><strong>Bachelor of Science in Electrical &amp Computer Engineering</strong> (September 2020 - Present)<br>
+        <p><strong>Diploma in Electrical &amp; Computer Engineering</strong><br>
         University of Patras, Patra, Greece<br>
-        Major: Computers (Software &amp Hardware)</p>
+        Sept. 2020 – Feb. 2026 (Expected)<br>
+        Grade: 7.9 / 10</p>
     `;
     document.body.appendChild(educationSection);
     
-    // Projects section
+    // Projects section (updated)
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
     projectsSection.innerHTML = `
         <h2>Projects</h2>
-        <h3>Foodies</h3>
-        <p>Full-stack web application simulating the complete process of placing and managing delivery orders. Built with Handlebars, CSS, JavaScript, and Node.js. </p> 
-        <br>
-        <h3>Classic 8-ball pool </h3>
-        <p>A 3D billiard game developed with C++ and OpenGL, featuring realistic physics simulation, dynamic lighting and shadow algorithms.</p>
-        <br>
-        <h3>Reinforcement Learning Optimal Policy</h3>
-        <p>A numerical and data-driven approach for solving both the short-sighted and infinite future reward reinforcement learning problems.</p>
-        <br>
-        <h3>Generative Models for Image Inpainting & Image Reconstruction</h3>
-        <p>A neural network-based approach for reconstructing  images from noisy and incomplete data, as well as for enhancing high-resolution images from low-resolution, noisy inputs using gradient descent techniques. Achieved high-fidelity image restoration with minimal input data, showcasing robust performance in both inpainting and super-resolution tasks.</p>
-        <br>
-        <h3>MNIST-Classifier</h3>
-        <p>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database using Python and TensorFlow. Achieved an accuracy of 99%.</p>
-        <br>
-        <h3>Numerical Solution of Schrödinger Equation</h3>
-        <p>Computational program solving the one-dimensional time-independent Schrödinger equation using the finite-difference method, written in Python.</p>
-        <br>
-        <h3>Zoo DBMS</h3>
-        <p>Graphical user interface-based database management system for zoo operations, including management of animals and staff, built with Python and SQLite.</p>
-        <br>
-        <h3>Gesture Rock Paper Scissors</h3>
-        <p>Rock-paper-scissors game utilizing camera-based hand gesture recognition and providing real-time haptic and visual feedback, implemented in Python.</p>
-        <br>
-        <h3>Sudoku Solver</h3>
-        <p>Program solving Sudoku puzzles of various sizes using linear programming principles and backtracking algorithms, developed in Python.</p>
+        <h3>Classic 8-Ball Pool</h3>
+        <p>C++, OpenGL | Dec 2024 – Feb 2025<br>Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.</p>
         <br>
         <h3>MyScanner</h3>
-        <p>Record scanning application, designed in Figma.</p>
+        <p>Figma | Dec 2024 – Jan 2025<br>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction. Redesigned workflows from existing apps, improving efficiency by 40%.</p>
+        <br>
+        <h3>Gesture Rock Paper Scissors</h3>
+        <p>Python, OpenCV, MediaPipe | Dec 2024 – Jan 2025<br>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</p>
+        <br>
+        <h3>GANs for Inpainting &amp; Reconstruction</h3>
+        <p>Python | Dec 2024<br>Used a trained GAN to reconstruct MNIST digit '8' from random noise vectors and partial input masks. Optimized latent input via gradient descent to improve reconstruction fidelity.</p>
+        <br>
+        <h3>Sudoku Solver</h3>
+        <p>Python | Sep 2024<br>Engineered a Sudoku solver using backtracking and linear programming techniques for arbitrary grid sizes.</p>
+        <br>
+        <h3>Foodies</h3>
+        <p>JavaScript, Node.js, Handlebars, CSS, SQLite | Apr 2024 – Jun 2024<br>Built a full-stack food ordering platform simulating delivery, cart, and order management systems. Applied MVC architecture for modular design.</p>
+        <br>
+        <h3>Quantum Solver</h3>
+        <p>Python | Jan 2024<br>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</p>
+        <br>
+        <!-- Keep additional projects not in CV -->
+        <h3>MNIST Classifier</h3>
+        <p>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database using Python and TensorFlow. Achieved 99% accuracy.</p>
+        <br>
+        <h3>Zoo DBMS</h3>
+        <p>GUI-based database management system for zoo operations, built with Python and SQLite.</p>
     `;
     document.body.appendChild(projectsSection);
     
-    // Experience section
+    // Experience section (updated)
     const experienceSection = document.createElement('section');
     experienceSection.setAttribute('id', 'experience');
     experienceSection.innerHTML = `
         <h2>Professional Experience</h2>
-        <h3>IT Intern</h3>
-        <h4>Cooperative Bank of Chania, Chania, Greece</h4>
-        <p><em>July 2023 – August 2023</em></p>
+        <h3>Data Scientist Intern</h3>
+        <h4>Homli, Athens, Greece</h4>
+        <p><em>June 2025 – Aug 2025</em></p>
         <ul>
-            <li>Delivered first-level technical support to end-users, resolving hardware and software issues efficiently.</li>
+            <li>Expanded the company’s Automated Valuation Model (AVM) to a new market through feature selection and model optimization.</li>
+            <li>Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.</li>
+            <li>Built web scrapers for raw data collection, cleaned and processed it, and stored structured datasets in PostgreSQL.</li>
+        </ul>
+        <h3>Information Technology Intern</h3>
+        <h4>Cooperative Bank of Chania, Chania, Greece</h4>
+        <p><em>July 2023 – Aug 2023</em></p>
+        <ul>
+            <li>Delivered first-level technical support to end-users, resolving hardware and software issues.</li>
             <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
-            <li>Managed user accounts and permissions to ensure data security and compliance with organizational policies.</li>
-            <li>Enhanced productivity by maintaining and troubleshooting IT infrastructure.</li>
-            <li>IT infrastructure monitoring and setup (Microsoft Office 365 , Teams, Printers, Network, security tools, routers, switches, software)</li>
+            <li>Managed user accounts and permissions to ensure data security and compliance.</li>
+            <li>IT infrastructure monitoring and setup (Microsoft 365, Teams, printers, networks, routers, switches, security tools).</li>
         </ul>
     `;
     document.body.appendChild(experienceSection);
     
-    // Skills section
+    // Skills section (updated)
     const skillsSection = document.createElement('section');
     skillsSection.setAttribute('id', 'skills');
     skillsSection.innerHTML = `
-        <h2>Skills &amp Competences</h2>
-        <h3>Engineering &amp Scientific Expertise</h3>
+        <h2>Skills &amp; Competences</h2>
+        <h3>Programming &amp; Technical</h3>
         <ul>
-            <li>Strong foundation in mathematics (calculus, linear algebra, differential equations, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
-            <li>Possess advanced knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
-            <li>Proficient in problem-solving and analytical techniques for engineering challenges.</li>
-            <li>Solid understanding of quantum computing concepts and algorithms.</li>
+            <li><strong>Languages:</strong> Python, C/C++, Java, JavaScript, HTML/CSS, SQL (PostgreSQL, SQLite), NoSQL (MongoDB)</li>
+            <li><strong>Frameworks &amp; Libraries:</strong> NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, TensorFlow, OpenCV, OpenGL</li>
+            <li><strong>ML &amp; Data Tools:</strong> WandB, ElevenLabs, data scraping (requests, gzip, pandas)</li>
+            <li><strong>DevOps &amp; Tools:</strong> Git, GitLab, Jira, VS Code, Visual Studio, Eclipse</li>
+            <li><strong>Other:</strong> Figma, MATLAB, Autodesk AutoCAD</li>
+            <li><strong>Networking:</strong> CCNA-level knowledge, routing/switching, network architecture</li>
         </ul>
-        <h3>Programming &amp Development</h3>
+        <h3>Engineering &amp; Scientific Expertise</h3>
         <ul>
-            <li?Languages: Python, JavaScript, C, C++, Java</li>
-            <li>Web Development: HTML, CSS, JavaScript, Node.js, Express.js</li>
-            <li>Version Control: Git, GitHub</li>
-        </ul>
-        <h3>Technical Expertise</h3>
-        <ul>
-            <li>Machine Learning: Strong understanding of algorithms, model building, and deployment</li>
-            <li>Graphics Programming: C++ and OpenGL for advanced visualizations</li>
-            <li>Database Systems: Proficient in SQL and NoSQL (MongoDB)</li>
-            <li>Computer Networks: TCP/IP protocols, configuration, and network architecture</li>
-            <li>Operating Systems: Windows, Unix/Linux</li>
-            <li>Computer &amp Network Security: Knowledge of network security principles, threat mitigation, and secure communication protocols</li>
-        </ul>
-        <h3>Design &amp Engineering Tools</h3>
-        <ul>
-            <li>UX/UI Design: Wireframing, prototyping, user research, and evaluation techniques for creating user-centered solutions.</li>
-            <li>Simulation &amp CAD: MATLAB, Autodesk AutoCAD</li>
+            <li>Strong foundation in mathematics (calculus, linear algebra, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
+            <li>Knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
+            <li>Understanding of quantum computing concepts and algorithms.</li>
         </ul>
         <h3>Languages</h3>
         <ul>
@@ -156,15 +149,15 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(skillsSection);
     
-    // Volunteering section
+    // Volunteering (unchanged)
     const volunteeringSection = document.createElement('section');
     volunteeringSection.setAttribute('id', 'volunteering');
     volunteeringSection.innerHTML = `
-        <h2>Volunteering &amp Extracurricular Activities</h2>
+        <h2>Volunteering &amp; Extracurricular Activities</h2>
         <h3><i>Startup Universe 2024</i> | Virtual | November 2024</h3>
         <ul>
             <li>Identified and recruited field experts to mentor Greek tech startups participating in the Startup Universe program.</li>
-            <li>Maintained a structured database of recruited experts using Excel, ensuring accurate tracking and follow-up.</li>
+            <li>Maintained a structured database of recruited experts using Excel.</li>
         </ul>
         <h3><i>Startup Week Patras 2024</i> | Patras, Greece | October 2024</h3>
         <ul>
@@ -175,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(volunteeringSection);
     
-    // Contact section
+    // Contact (unchanged)
     const contactSection = document.createElement('section');
     contactSection.setAttribute('id', 'contact');
     contactSection.innerHTML = `
@@ -187,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(contactSection);
     
-    // Footer
+    // Footer (unchanged)
     const footer = document.createElement('footer');
     footer.innerHTML = '<p>&copy; 2024 Orestis Koutroumpas</p>';
     document.body.appendChild(footer);
