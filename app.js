@@ -176,104 +176,103 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.body.appendChild(projectsSection);
 
-const skillsSection = document.createElement('section');
-skillsSection.setAttribute('id', 'skills');
-skillsSection.innerHTML = `
-  <h2>Skills & Competences</h2>
-  <div class="skills-grid">
+    const skillsSection = document.createElement('section');
+    skillsSection.setAttribute('id', 'skills');
+    skillsSection.innerHTML = `
+      <h2>Skills & Competences</h2>
+      <div class="skills-grid">
 
-    <div class="skill-card">
-      <h3>Programming & Technical</h3>
-      <ul>
-        <li><strong>Languages:</strong> Python, C/C++, Java, JavaScript, HTML/CSS, SQL (PostgreSQL, SQLite), NoSQL (MongoDB)</li>
-        <li><strong>Frameworks & Libraries:</strong> NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, TensorFlow, OpenCV, OpenGL</li>
-        <li><strong>ML & Data Tools:</strong> WandB, ElevenLabs, data scraping (requests, gzip, pandas)</li>
-        <li><strong>DevOps & Tools:</strong> Git, GitLab, Jira, VS Code, Visual Studio, Eclipse</li>
-        <li><strong>Other:</strong> Figma, MATLAB, Autodesk AutoCAD</li>
-        <li><strong>Networking:</strong> CCNA-level knowledge, routing/switching, network architecture</li>
-      </ul>
-    </div>
+        <div class="skill-card">
+          <h3>Programming & Technical</h3>
+          <ul>
+            <li><strong>Languages:</strong> Python, C/C++, Java, JavaScript, HTML/CSS, SQL (PostgreSQL, SQLite), NoSQL (MongoDB)</li>
+            <li><strong>Frameworks & Libraries:</strong> NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, TensorFlow, OpenCV, OpenGL</li>
+            <li><strong>ML & Data Tools:</strong> WandB, ElevenLabs, data scraping (requests, gzip, pandas)</li>
+            <li><strong>DevOps & Tools:</strong> Git, GitLab, Jira, VS Code, Visual Studio, Eclipse</li>
+            <li><strong>Other:</strong> Figma, MATLAB, Autodesk AutoCAD</li>
+            <li><strong>Networking:</strong> CCNA-level knowledge, routing/switching, network architecture</li>
+          </ul>
+        </div>
 
-    <div class="skill-card">
-      <h3>Engineering & Scientific Expertise</h3>
-      <ul>
-        <li>Strong foundation in mathematics (calculus, linear algebra, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
-        <li>Knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
-        <li>Understanding of quantum computing concepts and algorithms.</li>
-      </ul>
-    </div>
+        <div class="skill-card">
+          <h3>Engineering & Scientific Expertise</h3>
+          <ul>
+            <li>Strong foundation in mathematics (calculus, linear algebra, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
+            <li>Knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
+            <li>Understanding of quantum computing concepts and algorithms.</li>
+          </ul>
+        </div>
 
-    <div class="skill-card">
-      <h3>Languages</h3>
-      <ul>
-        <li>Greek: Native</li>
-        <li>English: C2 Proficiency (Michigan Proficiency)</li>
-      </ul>
-    </div>
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <ul>
+            <li>Greek: Native</li>
+            <li>English: C2 Proficiency (Michigan Proficiency)</li>
+          </ul>
+        </div>
 
-  </div>
-`;
-document.body.appendChild(skillsSection);
+      </div>
+    `;
+    document.body.appendChild(skillsSection);
 
-    
-// Volunteering Section
-const volunteeringSection = document.createElement('section');
-volunteeringSection.setAttribute('id', 'volunteering');
-volunteeringSection.innerHTML = `
-  <h2>Volunteering & Extracurricular Activities</h2>
-  <div class="volunteering-grid">
+        
+    // Volunteering Section
+    const volunteeringSection = document.createElement('section');
+    volunteeringSection.setAttribute('id', 'volunteering');
+    volunteeringSection.innerHTML = `
+      <h2>Volunteering & Extracurricular Activities</h2>
+      <div class="volunteering-grid">
 
-    <div class="volunteer-card">
-      <h3>Startup Universe 2024</h3>
-      <p><em>Virtual | November 2024</em></p>
-      <ul>
-        <li>Identified and recruited field experts to mentor Greek tech startups participating in the Startup Universe program.</li>
-        <li>Maintained a structured database of recruited experts using Excel.</li>
-      </ul>
-    </div>
+        <div class="volunteer-card">
+          <h3>Startup Universe 2024</h3>
+          <p><em>Virtual | November 2024</em></p>
+          <ul>
+            <li>Identified and recruited field experts to mentor Greek tech startups participating in the Startup Universe program.</li>
+            <li>Maintained a structured database of recruited experts using Excel.</li>
+          </ul>
+        </div>
 
-    <div class="volunteer-card">
-      <h3>Startup Week Patras 2024</h3>
-      <p><em>Patras, Greece | October 2024</em></p>
-      <ul>
-        <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
-        <li>Facilitated networking sessions and communication between attendees, speakers, and mentors.</li>
-      </ul>
-    </div>
+        <div class="volunteer-card">
+          <h3>Startup Week Patras 2024</h3>
+          <p><em>Patras, Greece | October 2024</em></p>
+          <ul>
+            <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
+            <li>Facilitated networking sessions and communication between attendees, speakers, and mentors.</li>
+          </ul>
+        </div>
 
-    <div class="volunteer-card">
-        <h3>Soft Skills Academy 6 - Creativity</h3>
-        <p><em>Patra | May 2022</em></p>
-        <ul>
-            <li>Participated in collaborative activities aimed at enhancing creativity, problem-solving, and teamwork skills by working in groups on practical exercises and challenges.</li>
-        </ul>
-    </div>
+        <div class="volunteer-card">
+            <h3>Soft Skills Academy 6 - Creativity</h3>
+            <p><em>Patra | May 2022</em></p>
+            <ul>
+                <li>Participated in collaborative activities aimed at enhancing creativity, problem-solving, and teamwork skills by working in groups on practical exercises and challenges.</li>
+            </ul>
+        </div>
 
 
-  </div>
-`;
-document.body.appendChild(volunteeringSection);
+      </div>
+    `;
+    document.body.appendChild(volunteeringSection);
 
-// Contact Section
-const contactSection = document.createElement('section');
-contactSection.setAttribute('id', 'contact');
-contactSection.innerHTML = `
-  <h2>Contact</h2>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <p>Email: <a href="mailto:o.koutroubas@gmail.com">o.koutroubas@gmail.com</a></p>
-      <p>Phone: +30 6971964537</p>
-      <p>GitHub: <a href="https://github.com/orestis-koutroumpas">GitHub</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248">LinkedIn</a></p>
-    </div>
-  </div>
-`;
-document.body.appendChild(contactSection);
+    // Contact Section
+    const contactSection = document.createElement('section');
+    contactSection.setAttribute('id', 'contact');
+    contactSection.innerHTML = `
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p>Email: <a href="mailto:o.koutroubas@gmail.com">o.koutroubas@gmail.com</a></p>
+          <p>Phone: +30 6971964537</p>
+          <p>GitHub: <a href="https://github.com/orestis-koutroumpas">GitHub</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248">LinkedIn</a></p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(contactSection);
 
-// Footer
-const footer = document.createElement('footer');
-footer.innerHTML = '<p>&copy; 2025 Orestis Koutroumpas</p>';
-document.body.appendChild(footer);
-
+    // Footer
+    const footer = document.createElement('footer');
+    footer.innerHTML = '<p>&copy; 2025 Orestis Koutroumpas</p>';
+    document.body.appendChild(footer);
 
 });
