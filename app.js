@@ -197,9 +197,10 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="skill-card">
           <h3>Engineering & Scientific Expertise</h3>
           <ul>
-            <li>Strong foundation in mathematics (calculus, linear algebra, probability, statistics) and physics (electromagnetism, quantum electronics).</li>
-            <li>Knowledge in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
-            <li>Understanding of quantum computing concepts and algorithms.</li>
+            <li>Advanced proficiency in mathematics (calculus, linear algebra, probability, and statistics) and physics (electromagnetism and quantum electronics).</li>
+            <li>Solid foundation in electrical circuits, microelectronics, power systems, and integrated electronics.</li>
+            <li>Comprehensive understanding of quantum computing principles and relevant algorithms.</li>
+            <li>Strong knowledge of computer science fundamentals, including data structures, algorithms (DSA), and software engineering principles.</li>
           </ul>
         </div>
 
