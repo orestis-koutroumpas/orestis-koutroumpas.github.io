@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     document.head.innerHTML = `
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Orestis Koutroumpas | Curriculum Vitae</title>
+        <title>Orestis Koutroumpas</title>
         <link rel="icon" href="icon.png" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
     `;
-    
+
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
     h1.textContent = 'Orestis Koutroumpas';
     header.appendChild(h1);
-    
+
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
     const navItems = [
@@ -23,9 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { href: '#projects', text: 'Projects' },
         { href: '#skills', text: 'Skills' },
         { href: '#volunteering', text: 'Volunteering' },
-        { href: '#contact', text: 'Contact' }
     ];
-    
+
     navItems.forEach(item => {
         const li = document.createElement('li');
         const a = document.createElement('a');
@@ -37,26 +36,49 @@ document.addEventListener("DOMContentLoaded", function() {
     nav.appendChild(ul);
     header.appendChild(nav);
     document.body.appendChild(header);
-    
+
+    // Main container for all sections
+    const main = document.createElement('main');
+
+    // About Section
     const aboutSection = document.createElement('section');
     aboutSection.setAttribute('id', 'about');
     aboutSection.innerHTML = `
         <h2>About Me</h2>
-        <p>I am an undergraduate student (expected graduation 2/2026) in Electrical and Computer Engineering with a strong foundation in mathematics, physics, and engineering principles. Passionate about contributing to cutting-edge research and innovation, particularly in fields like artificial intelligence, computer networks, and software engineering. Skilled in software development, data analysis, and computational problem-solving, I am eager to explore practical applications of these advanced technologies. Currently seeking a challenging field of study experience that will further expand my knowledge and skill set in these dynamic areas.</p>
+        <p>I am an undergraduate student in Electrical and Computer Engineering, expected to graduate in February 2026. I possess a strong foundation in mathematics, physics, and engineering principles. I am passionate about advancing research and innovation, especially in artificial intelligence, computer networks, and software engineering. With skills in software development, data analysis, and computational problem-solving, I am keen to apply these technologies in practical, real-world scenarios. I am currently seeking a challenging academic and research experience to deepen my expertise and broaden my skill set in these dynamic and rapidly evolving fields.</p>
     `;
-    document.body.appendChild(aboutSection);
-    
+    main.appendChild(aboutSection);
+
+    // Contact Section
+    const contactSection = document.createElement('section');
+    contactSection.setAttribute('id', 'contact');
+    contactSection.innerHTML = `
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p>Email: <a href="mailto:o.koutroubas@gmail.com">o.koutroubas@gmail.com</a></p>
+          <p>Phone: +30 6971964537</p>
+          <p>GitHub: <a href="https://github.com/orestis-koutroumpas">GitHub</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248">LinkedIn</a></p>
+        </div>
+      </div>
+    `;
+    main.appendChild(contactSection);
+
+
+    // Education Section
     const educationSection = document.createElement('section');
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = `
         <h2>Education</h2>
-        <p><strong>Diploma in Electrical &amp; Computer Engineering</strong><br>
-        University of Patras, Patra, Greece<br>
-        Sept. 2020 – Feb. 2026 (Expected)<br>
+        <h4>Diploma in Electrical &amp; Computer Engineering</h4>
+        <p></p>University of Patras, Patra, Greece<br>
+        Sep 2020 – Feb 2026 (Expected)<br>
         Grade: 7.9 / 10</p>
     `;
-    document.body.appendChild(educationSection);
-    
+    main.appendChild(educationSection);
+
+    // Experience Section
     const experienceSection = document.createElement('section');
     experienceSection.setAttribute('id', 'experience');
     experienceSection.innerHTML = `
@@ -66,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="experience-card">
         <h3>Data Scientist Intern</h3>
         <h4>Homli, Athens, Greece</h4>
-        <p><em>June 2025 – Aug 2025</em></p>
+        <p>Jun 2025 – Aug 2025</p>
         <ul>
             <li>Expanded the company’s Automated Valuation Model (AVM) to a new market through feature selection and model optimization.</li>
             <li>Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.</li>
@@ -77,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="experience-card">
         <h3>Information Technology Intern</h3>
         <h4>Cooperative Bank of Chania, Chania, Greece</h4>
-        <p><em>July 2023 – Aug 2023</em></p>
+        <p>Jul 2023 – Aug 2023</p>
         <ul>
             <li>Delivered first-level technical support to end-users, resolving hardware and software issues.</li>
             <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
@@ -88,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     </div>
     `;
-    document.body.appendChild(experienceSection);
+    main.appendChild(experienceSection);
 
-
+    // Projects Section
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
     projectsSection.innerHTML = `
@@ -98,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="projects-grid">
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Classic-8-Ball-Pool" target="_blank">Classic 8-Ball Pool</a></h3>
-        <p><span class="tech">C++, OpenGL</span> | Dec 2024 – Feb 2025</p>
+        <p>C++, OpenGL | Dec 2024 – Feb 2025</p>
         <ul>
           <li>Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.</li>
         </ul>
@@ -106,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://www.figma.com/proto/9p84KSrzTdfuToZyJyjYlX/My-Scanner?node-id=165-7141&p=f&t=2jWoCvHcmG3MXPBM-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=165%3A7141" target="_blank">MyScanner</a></h3>
-        <p><span class="tech">Figma</span> | Dec 2024 – Jan 2025</p>
+        <p><Figma | Dec 2024 – Jan 2025</p>
         <ul>
           <li>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.</li>
           <li>Redesigned workflows from existing apps, improving efficiency by 40%.</li>
@@ -115,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Gesture-Rock-Paper-Scissors" target="_blank">Gesture Rock Paper Scissors</a></h3>
-        <p><span class="tech">Python, OpenCV, MediaPipe</span> | Dec 2024 – Jan 2025</p>
+        <p>Python, OpenCV, MediaPipe | Dec 2024 – Jan 2025</p>
         <ul>
           <li>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</li>
         </ul>
@@ -123,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Inpainting" target="_blank">GANs for Inpainting & Reconstruction</a></h3>
-        <p><span class="tech">Python, NumPy, Matplotlib</span> | Dec 2024</p>
+        <p>Python, NumPy, Matplotlib | Dec 2024</p>
         <ul>
           <li>Used a trained GAN to reconstruct MNIST digit '8' from random noise vectors and partial input masks.</li>
           <li>Optimized latent input via gradient descent to improve reconstruction fidelity.</li>
@@ -132,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Classifier" target="_blank">MNIST Classifier</a></h3>
-        <p><span class="tech">Python, TensorFlow, NumPy</span> | Nov 2024</p>
+        <p>Python, TensorFlow, NumPy | Nov 2024</p>
         <ul>
           <li>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database.</li>
           <li>Achieved 99% accuracy.</li>
@@ -141,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Sudoku-Solver" target="_blank">Sudoku Solver</a></h3>
-        <p><span class="tech">Python, PuLP</span> | Sep 2024</p>
+        <p>Python, PuLP | Sep 2024</p>
         <ul>
           <li>Engineered a Sudoku solver using backtracking and linear programming techniques for arbitrary grid sizes.</li>
         </ul>
@@ -149,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Foodies" target="_blank">Foodies</a></h3>
-        <p><span class="tech">JavaScript, Node.js, Handlebars, CSS, SQLite</span> | Apr 2024 – Jun 2024</p>
+        <p>JavaScript, Node.js, Handlebars, CSS, SQLite | Apr 2024 – Jun 2024</p>
         <ul>
           <li>Built a full-stack food ordering platform simulating delivery, cart, and order management systems.</li>
           <li>Applied MVC architecture for modular design.</li>
@@ -158,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Numerical-Solution-of-Schrodinger-Equation" target="_blank">Numerical Solution of Schrödinger Equation</a></h3>
-        <p><span class="tech">Python, NumPy</span> | Jan 2024</p>
+        <p>Python, NumPy | Jan 2024</p>
         <ul>
           <li>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</li>
         </ul>
@@ -166,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/ZOO-DBMS" target="_blank">Zoo DBMS</a></h3>
-        <p><span class="tech">Python, SQLite</span> | Dec 2023 – Jan 2024</p>
+        <p>Python, SQLite | Dec 2023 – Jan 2024</p>
         <ul>
           <li>GUI-based database management system for zoo operations, built with Python and SQLite.</li>
         </ul>
@@ -174,8 +196,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     </div>
     `;
-    document.body.appendChild(projectsSection);
+    main.appendChild(projectsSection);
 
+    // Skills Section
     const skillsSection = document.createElement('section');
     skillsSection.setAttribute('id', 'skills');
     skillsSection.innerHTML = `
@@ -214,9 +237,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
       </div>
     `;
-    document.body.appendChild(skillsSection);
+    main.appendChild(skillsSection);
 
-        
     // Volunteering Section
     const volunteeringSection = document.createElement('section');
     volunteeringSection.setAttribute('id', 'volunteering');
@@ -226,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <div class="volunteer-card">
           <h3>Startup Universe 2024</h3>
-          <p><em>Virtual | November 2024</em></p>
+          <p>Virtual | Nov 2024</p>
           <ul>
             <li>Identified and recruited field experts to mentor Greek tech startups participating in the Startup Universe program.</li>
             <li>Maintained a structured database of recruited experts using Excel.</li>
@@ -235,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <div class="volunteer-card">
           <h3>Startup Week Patras 2024</h3>
-          <p><em>Patras, Greece | October 2024</em></p>
+          <p>Patras, Greece | Oct 2024</p>
           <ul>
             <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
             <li>Facilitated networking sessions and communication between attendees, speakers, and mentors.</li>
@@ -244,36 +266,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <div class="volunteer-card">
             <h3>Soft Skills Academy 6 - Creativity</h3>
-            <p><em>Patra | May 2022</em></p>
+            <p>Patras, Greece | May 2022</p>
             <ul>
                 <li>Participated in collaborative activities aimed at enhancing creativity, problem-solving, and teamwork skills by working in groups on practical exercises and challenges.</li>
             </ul>
         </div>
 
-
       </div>
     `;
-    document.body.appendChild(volunteeringSection);
+    main.appendChild(volunteeringSection);
 
-    // Contact Section
-    const contactSection = document.createElement('section');
-    contactSection.setAttribute('id', 'contact');
-    contactSection.innerHTML = `
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <p>Email: <a href="mailto:o.koutroubas@gmail.com">o.koutroubas@gmail.com</a></p>
-          <p>Phone: +30 6971964537</p>
-          <p>GitHub: <a href="https://github.com/orestis-koutroumpas">GitHub</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248">LinkedIn</a></p>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(contactSection);
+    // Append main to body
+    document.body.appendChild(main);
 
     // Footer
     const footer = document.createElement('footer');
     footer.innerHTML = '<p>&copy; 2025 Orestis Koutroumpas</p>';
     document.body.appendChild(footer);
+
+    function router() {
+        const hash = window.location.hash || "#about";
+        // Sections used in nav
+        const sections = ['about', 'education', 'experience', 'projects', 'skills', 'volunteering', 'contact'];
+
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            if ((hash === '#about' && (id === 'about' || id === 'contact')) || ('#' + id === hash)) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    // Run router on page load
+    router();
+
+    // Listen to hash change events
+    window.addEventListener('hashchange', router);
 
 });
