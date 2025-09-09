@@ -71,10 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = `
         <h2>Education</h2>
-        <h4>Diploma in Electrical &amp; Computer Engineering</h4>
-        <p></p>University of Patras, Patra, Greece<br>
-        Sep 2020 – Feb 2026 (Expected)<br>
-        Grade: 7.9 / 10</p>
+        <h3>Diploma in Electrical &amp; Computer Engineering</h3>
+        <p>
+          University of Patras, Patra, Greece<br>
+          Sep 2020 – Feb 2026 (Expected)<br>
+          Grade: 7.9 / 10
+        </p>
     `;
     main.appendChild(educationSection);
 
@@ -86,26 +88,26 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="experience-grid">
 
         <div class="experience-card">
-        <h3>Data Scientist Intern</h3>
-        <h4>Homli, Athens, Greece</h4>
-        <p>Jun 2025 – Aug 2025</p>
-        <ul>
-            <li>Expanded the company’s Automated Valuation Model (AVM) to a new market through feature selection and model optimization.</li>
-            <li>Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.</li>
-            <li>Built web scrapers for raw data collection, cleaned and processed it, and stored structured datasets in PostgreSQL.</li>
-        </ul>
+          <h3>Data Scientist Intern</h3>
+          <h4>Homli, Athens, Greece</h4>
+          <p>Jun 2025 – Aug 2025</p>
+          <ul>
+              <li>Expanded the company’s Automated Valuation Model (AVM) to a new market through feature selection and model optimization.</li>
+              <li>Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.</li>
+              <li>Built web scrapers for raw data collection, cleaned and processed it, and stored structured datasets in PostgreSQL.</li>
+          </ul>
         </div>
 
         <div class="experience-card">
-        <h3>Information Technology Intern</h3>
-        <h4>Cooperative Bank of Chania, Chania, Greece</h4>
-        <p>Jul 2023 – Aug 2023</p>
-        <ul>
-            <li>Delivered first-level technical support to end-users, resolving hardware and software issues.</li>
-            <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
-            <li>Managed user accounts and permissions to ensure data security and compliance.</li>
-            <li>IT infrastructure monitoring and setup (Microsoft 365, Teams, printers, networks, routers, switches, security tools).</li>
-        </ul>
+          <h3>Information Technology Intern</h3>
+          <h4>Cooperative Bank of Chania, Chania, Greece</h4>
+          <p>Jul 2023 – Aug 2023</p>
+          <ul>
+              <li>Delivered first-level technical support to end-users, resolving hardware and software issues.</li>
+              <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
+              <li>Managed user accounts and permissions to ensure data security and compliance.</li>
+              <li>IT infrastructure monitoring and setup (Microsoft 365, Teams, printers, networks, routers, switches, security tools).</li>
+          </ul>
         </div>
 
     </div>

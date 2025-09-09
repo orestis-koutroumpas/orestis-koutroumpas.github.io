@@ -41,7 +41,7 @@ header h1 {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   list-style: none;
 }
 
@@ -173,7 +173,8 @@ h2 {
 }
 
 .contact-card p {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.0em;
 }
 
 .contact-card a {
