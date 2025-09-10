@@ -71,12 +71,16 @@ document.addEventListener("DOMContentLoaded", function() {
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = `
         <h2>Education</h2>
-        <h3>Diploma in Electrical &amp; Computer Engineering</h3>
-        <p>
-          University of Patras, Patra, Greece<br>
-          Sep 2020 – Feb 2026 (Expected)<br>
-          Grade: 7.9 / 10
-        </p>
+        <div? class="education-grid">
+          <div class="education-card">
+            <h3>Diploma in Electrical &amp; Computer Engineering</h3>
+            <h4>University of Patras, Patra, Greece</h4>
+              <p>
+              Sep 2020 – Feb 2026 (Expected)<br>
+              Grade: 7.9 / 10
+            </h4>
+          </div>
+        </div?
     `;
     main.appendChild(educationSection);
 
@@ -120,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
     projectsSection.innerHTML = `
     <h2>Projects</h2>
     <div class="projects-grid">
+
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Classic-8-Ball-Pool" target="_blank">Classic 8-Ball Pool</a></h3>
         <p>C++, OpenGL | Dec 2024 – Feb 2025</p>
@@ -130,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://www.figma.com/proto/9p84KSrzTdfuToZyJyjYlX/My-Scanner?node-id=165-7141&p=f&t=2jWoCvHcmG3MXPBM-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=165%3A7141" target="_blank">MyScanner</a></h3>
-        <p><Figma | Dec 2024 – Jan 2025</p>
+        <p>Figma | Dec 2024 – Jan 2025</p>
         <ul>
           <li>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.</li>
           <li>Redesigned workflows from existing apps, improving efficiency by 40%.</li>
@@ -139,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Gesture-Rock-Paper-Scissors" target="_blank">Gesture Rock Paper Scissors</a></h3>
-        <p>Python, OpenCV, MediaPipe | Dec 2024 – Jan 2025</p>
+        <p>Python, OpenCV | Dec 2024 – Jan 2025</p>
         <ul>
           <li>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</li>
         </ul>
@@ -156,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Classifier" target="_blank">MNIST Classifier</a></h3>
-        <p>Python, TensorFlow, NumPy | Nov 2024</p>
+        <p>Python, NumPy, Matplotlib | Nov 2024</p>
         <ul>
           <li>Neural network classifier for distinguishing between numbers 0 and 8 from the MNIST database.</li>
           <li>Achieved 99% accuracy.</li>
@@ -173,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Foodies" target="_blank">Foodies</a></h3>
-        <p>JavaScript, Node.js, Handlebars, CSS, SQLite | Apr 2024 – Jun 2024</p>
+        <p>JavaScript, Node.js, Express.js, Handlebars, SQLite, CSS | Apr 2024 – Jun 2024</p>
         <ul>
           <li>Built a full-stack food ordering platform simulating delivery, cart, and order management systems.</li>
           <li>Applied MVC architecture for modular design.</li>
@@ -182,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/Numerical-Solution-of-Schrodinger-Equation" target="_blank">Numerical Solution of Schrödinger Equation</a></h3>
-        <p>Python, NumPy | Jan 2024</p>
+        <p>Python, NumPy, Matplotlib | Jan 2024</p>
         <ul>
           <li>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</li>
         </ul>
@@ -190,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="project-card">
         <h3><a href="https://github.com/orestis-koutroumpas/ZOO-DBMS" target="_blank">Zoo DBMS</a></h3>
-        <p>Python, SQLite | Dec 2023 – Jan 2024</p>
+        <p>Python, SQLite, tkinter | Dec 2023 – Jan 2024</p>
         <ul>
           <li>GUI-based database management system for zoo operations, built with Python and SQLite.</li>
         </ul>
