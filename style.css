@@ -39,15 +39,13 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-html, body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Sora', sans-serif;
   background-color: var(--bg-base);
   color: var(--text-primary);
@@ -59,7 +57,8 @@ body {
 }
 
 main {
-  flex: 1;
+  flex: 1 0 auto;
+  padding-bottom: 2rem;
 }
 
 /* =========================
@@ -116,21 +115,16 @@ nav ul li a:hover {
   background-color: var(--bg-card);
 }
 
-/* =========================
-   RESPONSIVE NAVIGATION
-   ========================= */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 1.25rem;
   }
-
   nav ul {
     gap: 0.2rem;
     justify-content: flex-start;
   }
-
   nav ul li a {
     font-size: 0.8rem;
     padding: 0.35rem 0.65rem;
@@ -177,16 +171,29 @@ h2::after {
 }
 
 /* =========================
-   ABOUT — PHOTO + BIO
+   ABOUT ME
    ========================= */
 .about-layout {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: flex-start;
 }
 
+.about-bio {
+  flex: 1;
+  order: 1;
+}
+
+.about-bio p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
 .about-photo-wrap {
   flex-shrink: 0;
+  order: 2;
 }
 
 .about-photo {
@@ -199,41 +206,61 @@ h2::after {
   display: block;
 }
 
-.about-photo-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: var(--radius-md);
-  border: 2px dashed var(--border);
-  background-color: var(--bg-card);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-family: 'DM Mono', monospace;
-  text-align: center;
-}
-
-.about-photo-placeholder svg {
-  opacity: 0.4;
-}
-
-.about-bio p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
 @media (max-width: 600px) {
   .about-layout {
     flex-direction: column;
     align-items: center;
   }
-  .about-bio {
-    text-align: center;
-  }
+  .about-bio { order: 2; text-align: center; }
+  .about-photo-wrap { order: 1; }
+}
+
+/* =========================
+   CONTACT ME
+   ========================= */
+#contact {
+  text-align: center;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.contact-card p {
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 0.6rem;
+}
+
+.contact-card .contact-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-family: 'DM Mono', monospace;
+  min-width: 64px;
+  text-align: right;
+}
+
+.contact-card a {
+  color: var(--text-link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* =========================
@@ -269,7 +296,7 @@ h2::after {
 [class$="-card"] h4 {
   font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
   color: var(--text-secondary);
 }
 
@@ -303,6 +330,22 @@ h2::after {
 }
 
 /* =========================
+   SHARED DATE TAG
+   ========================= */
+.date-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  padding: 0.12rem 0.55rem;
+  border-radius: 100px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+/* =========================
    EDUCATION
    ========================= */
 .education-card .grade {
@@ -314,73 +357,99 @@ h2::after {
   border: 1px solid var(--accent-dim);
   padding: 0.15rem 0.6rem;
   border-radius: 100px;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.9rem;
 }
 
+/* Coursework pill grid */
 .coursework {
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  margin-top: 0.25rem;
 }
 
-.coursework strong {
-  display: block;
-  margin-bottom: 0.3rem;
-  color: var(--text-primary);
-}
-
-.coursework ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.coursework li {
-  margin-bottom: 0.2rem;
-}
-/* =========================
-   EXPERIENCE
-   ========================= */
-.experience-card .date-tag {
-  display: inline-block;
+.coursework-label {
+  font-size: 0.75rem;
   font-family: 'DM Mono', monospace;
-  font-size: 0.78rem;
   color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.coursework-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coursework-pills li {
+  font-size: 0.77rem;
+  font-family: 'DM Mono', monospace;
+  color: var(--text-secondary);
   background: var(--bg-base);
   border: 1px solid var(--border-subtle);
-  padding: 0.12rem 0.55rem;
+  padding: 0.22rem 0.7rem;
   border-radius: 100px;
-  margin-bottom: 0.65rem;
+  margin: 0;
+  padding-left: 0.7rem;   /* override the generic card li padding */
+}
+
+.coursework-pills li::before {
+  display: none;
 }
 
 /* =========================
-   PROJECTS
+   PROJECTS — one per row, with image
    ========================= */
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .project-card {
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+}
+
+.project-img-wrap {
+  flex-shrink: 0;
+  width: 140px;
+  height: 96px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-base);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  background: var(--bg-surface);
 }
 
-.project-card h3 {
-  margin-bottom: 0.2rem;
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
 }
 
-.project-card h3 a {
+.project-card:hover .project-img-wrap img {
+  transform: scale(1.06);
+}
+
+.project-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-content h3 {
+  margin-bottom: 0.1rem;
+}
+
+.project-content h3 a {
   color: var(--text-link);
   text-decoration: none;
   font-weight: 600;
@@ -388,16 +457,27 @@ h2::after {
   transition: color 0.2s;
 }
 
-.project-card h3 a:hover {
+.project-content h3 a:hover {
   color: var(--accent);
   text-decoration: underline;
 }
 
-.project-card .tech-tag {
+.project-content .tech-tag {
   font-family: 'DM Mono', monospace;
   font-size: 0.75rem;
   color: var(--text-muted);
   margin-bottom: 0.5rem;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .project-img-wrap {
+    width: 100%;
+    height: 150px;
+  }
 }
 
 /* =========================
@@ -409,55 +489,70 @@ h2::after {
 }
 
 /* =========================
-   CONTACT
+   VOLUNTEERING — with image
    ========================= */
-#contact {
-  text-align: left;
-}
-
-.contact-card {
-  max-width: 480px;
-}
-
-.contact-card p {
-  margin-bottom: 0.65rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.volunteering-grid {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.contact-card .contact-label {
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  font-family: 'DM Mono', monospace;
-  min-width: 60px;
+.volunteer-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
 }
 
-.contact-card a {
-  color: var(--text-link);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
+.volunteer-img-wrap {
+  flex-shrink: 0;
+  width: 120px;
+  height: 84px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
 }
 
-.contact-card a:hover {
-  color: var(--accent);
-  text-decoration: underline;
+.volunteer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover; 
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.volunteer-card:hover .volunteer-img-wrap img {
+  transform: scale(1.06);
+}
+
+.volunteer-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+  .volunteer-card {
+    flex-direction: column;
+  }
+  .volunteer-img-wrap {
+    width: 100%;
+    height: 130px;
+  }
 }
 
 /* =========================
-   FOOTER
+   FOOTER — always at bottom
    ========================= */
 footer {
+  flex-shrink: 0;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   color: var(--text-muted);
   text-align: center;
   padding: 1.25rem;
   width: 100%;
-  margin-top: auto;
   font-size: 0.8rem;
   font-family: 'DM Mono', monospace;
 }

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Orestis Koutroumpas</title>
-        <link rel="icon" href="icon.png" type="image/x-icon">
+        <link rel="icon" href="img/icon.png" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
     `;
 
@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
     const navItems = [
-        { href: '#about',       text: 'About' },
-        { href: '#education',   text: 'Education' },
-        { href: '#experience',  text: 'Experience' },
-        { href: '#projects',    text: 'Projects' },
-        { href: '#skills',      text: 'Skills' },
-        { href: '#volunteering',text: 'Volunteering' },
+        { href: '#about',        text: 'About' },
+        { href: '#education',    text: 'Education' },
+        { href: '#experience',   text: 'Experience' },
+        { href: '#projects',     text: 'Projects' },
+        { href: '#skills',       text: 'Skills' },
+        { href: '#volunteering', text: 'Volunteering' },
     ];
 
     navItems.forEach(item => {
@@ -39,31 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
     // ── MAIN ────────────────────────────────────────────────────────────────
     const main = document.createElement('main');
 
-    // ABOUT ──────────────────────────────────────────────────────────────────
+    // ── ABOUT ───────────────────────────────────────────────────────────────
     const aboutSection = document.createElement('section');
     aboutSection.setAttribute('id', 'about');
     aboutSection.innerHTML = `
-      <h2>About Me</h2> 
+      <h2>About Me</h2>
       <div class="about-layout">
-        <div class="about-photo-wrap">
-          <img src="photo.jpg" alt="My Photo" class="about-photo">
-        </div>
-
         <div class="about-bio">
           <p>
-            Electrical and Computer Engineering graduate with hands-on industry experience in AI/ML 
-            engineering and data science, including production-grade NLP and LLM systems at Accenture 
-            and real estate AVM development at Homli. Strong foundations in machine learning, and 
-            software engineering, complemented by a diploma thesis on biometric authentication using 
-            eye-tracking data. Passionate about the intersection of quantum theory and artificial 
+            Electrical and Computer Engineering graduate with hands-on industry experience in AI/ML
+            engineering and data science, including production-grade NLP and LLM systems at Accenture
+            and real estate AVM development at Homli. Strong foundations in machine learning, and
+            software engineering, complemented by a diploma thesis on biometric authentication using
+            eye-tracking data. Passionate about the intersection of quantum theory and artificial
             intelligence, and eager to deepen expertise through advanced postgraduate research.
           </p>
+        </div>
+        <div class="about-photo-wrap">
+          <img src="img/photo.jpg" alt="Orestis Koutroumpas" class="about-photo">
         </div>
       </div>
     `;
     main.appendChild(aboutSection);
 
-    // CONTACT ────────────────────────────────────────────────────────────────
+    // ── CONTACT ─────────────────────────────────────────────────────────────
     const contactSection = document.createElement('section');
     contactSection.setAttribute('id', 'contact');
     contactSection.innerHTML = `
@@ -79,44 +78,44 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     main.appendChild(contactSection);
 
-    // EDUCATION ──────────────────────────────────────────────────────────────
+    // ── EDUCATION ───────────────────────────────────────────────────────────
     const educationSection = document.createElement('section');
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = `
-    <h2>Education</h2>
-    <div class="education-grid">
-      <div class="education-card">
-        <h3>Diploma in Electrical &amp; Computer Engineering</h3>
-        <h4>University of Patras — Patras, Greece</h4>
-        <p>Sep 2020 – Feb 2026</p>
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <h3>Diploma in Electrical &amp; Computer Engineering</h3>
+          <h4>University of Patras — Patras, Greece</h4>
+          <span class="date-tag">Sep 2020 – Feb 2026</span><br>
+          <span class="grade">Grade: 8.19 / 10</span>
 
-        <span class="grade">Grade: 8.19 / 10</span>
-
-        <div class="coursework">
-          <strong>Relevant Coursework:</strong>
-          <ul>
-            <li>Quantum Computing</li>
-            <li>Quantum Electronics</li>
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-            <li>Signal Processing</li>
-            <li>Algorithms &amp; Data Structures</li>
-            <li>Linear Algebra</li>
-            <li>Probability &amp; Statistics</li>
-            <li>Computer Networks</li>
-          </ul>
+          <div class="coursework">
+            <span class="coursework-label">Relevant Coursework</span>
+            <ul class="coursework-pills">
+              <li>Quantum Computing</li>
+              <li>Quantum Electronics</li>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
+              <li>Signal Processing</li>
+              <li>Algorithms &amp; Data Structures</li>
+              <li>Linear Algebra</li>
+              <li>Probability &amp; Statistics</li>
+              <li>Computer Networks</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     `;
     main.appendChild(educationSection);
 
-    // EXPERIENCE ─────────────────────────────────────────────────────────────
+    // ── EXPERIENCE ──────────────────────────────────────────────────────────
+    // Date badge matches education style (shared .date-tag)
     const experienceSection = document.createElement('section');
     experienceSection.setAttribute('id', 'experience');
     experienceSection.innerHTML = `
-    <h2>Experience</h2>
-    <div class="experience-grid">
+      <h2>Experience</h2>
+      <div class="experience-grid">
 
         <div class="experience-card">
           <h3>AI / ML Engineer</h3>
@@ -151,105 +150,158 @@ document.addEventListener("DOMContentLoaded", function() {
           </ul>
         </div>
 
-    </div>
+      </div>
     `;
     main.appendChild(experienceSection);
 
-    // PROJECTS ───────────────────────────────────────────────────────────────
+    // ── PROJECTS ────────────────────────────────────────────────────────────
+    // One project per row; each has a thumbnail image on the left.
+    // Replace the src values with your own screenshots.
+    // Placeholder images use picsum.photos with a unique seed per project.
+    const projects = [
+      {
+        title:  'Eye Tracking Authentication',
+        href:   'https://github.com/orestis-koutroumpas/eye-tracking-authentication',
+        tech:   'Python, scikit-learn · Apr 2025 – Dec 2025',
+        img:    'img/projects/eye_tracking.jpg',       // ← replace with your screenshot
+        imgAlt: 'Eye Tracking Authentication screenshot',
+        bullets: [
+          '<em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as a continuous, passive secondary security layer.',
+          'Achieved a 1.9% Equal Error Rate (EER) using only 12% of the available training data, demonstrating high data efficiency.',
+        ],
+      },
+      {
+        title:  'Classic 8-Ball Pool',
+        href:   'https://github.com/orestis-koutroumpas/Classic-8-Ball-Pool',
+        tech:   'C++, OpenGL · Dec 2024 – Feb 2025',
+        img:    'img/projects/pool.jpg',
+        imgAlt: '8-Ball Pool game screenshot',
+        bullets: [
+          'Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.',
+        ],
+      },
+      {
+        title:  'MyScanner',
+        href:   'https://www.figma.com/proto/9p84KSrzTdfuToZyJyjYlX/My-Scanner?node-id=165-7141',
+        tech:   'Figma · Dec 2024 – Jan 2025',
+        img:    'img/projects/my_scanner.jpg',
+        imgAlt: 'MyScanner Figma prototype',
+        bullets: [
+          'Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.',
+          'Redesigned workflows from existing apps, improving efficiency by 40%.',
+        ],
+      },
+      {
+        title:  'Gesture Rock Paper Scissors',
+        href:   'https://github.com/orestis-koutroumpas/Gesture-Rock-Paper-Scissors',
+        tech:   'Python, OpenCV · Dec 2024 – Jan 2025',
+        img:    'img/projects/rps.jpg',
+        imgAlt: 'Gesture Rock Paper Scissors screenshot',
+        bullets: [
+          'Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.',
+        ],
+      },
+      {
+        title:  'GANs for Inpainting & Reconstruction',
+        href:   'https://github.com/orestis-koutroumpas/Mnist-Inpainting',
+        tech:   'Python, NumPy, Matplotlib · Dec 2024',
+        img:    'img/projects/gans.png',
+        imgAlt: 'GAN inpainting result',
+        bullets: [
+          'Used a trained GAN to reconstruct MNIST digit "8" from random noise vectors and partial input masks.',
+          'Optimized latent input via gradient descent to improve reconstruction fidelity.',
+        ],
+      },
+      {
+        title:  'MNIST Classifier',
+        href:   'https://github.com/orestis-koutroumpas/Mnist-Classifier',
+        tech:   'Python, NumPy, Matplotlib · Nov 2024',
+        img:    'img/projects/mnist.png',
+        imgAlt: 'MNIST Classifier output',
+        bullets: [
+          'Neural network classifier distinguishing between digits 0 and 8. Achieved 99% accuracy.',
+        ],
+      },
+      {
+        title:  'Sudoku Solver',
+        href:   'https://github.com/orestis-koutroumpas/Sudoku-Solver',
+        tech:   'Python, PuLP · Sep 2024',
+        img:    'img/projects/sudoku.jpg',
+        imgAlt: 'Sudoku Solver screenshot',
+        bullets: [
+          'Engineered a solver using backtracking and linear programming for arbitrary grid sizes.',
+        ],
+      },
+      {
+        title:  'Foodies',
+        href:   'https://github.com/orestis-koutroumpas/Foodies',
+        tech:   'JavaScript, Node.js, Express.js, SQLite · Apr – Jun 2024',
+        img:    'img/projects/small_demo.gif',
+        imgAlt: 'Foodies platform screenshot',
+        bullets: [
+          'Built a full-stack food ordering platform with delivery, cart, and order management using MVC architecture.',
+        ],
+      },
+      {
+        title:  'Schrödinger Equation Solver',
+        href:   'https://github.com/orestis-koutroumpas/Numerical-Solution-of-Schrodinger-Equation',
+        tech:   'Python, NumPy, Matplotlib · Jan 2024',
+        img:    'img/projects/schrodinger.png',
+        imgAlt: 'Schrödinger solver plot',
+        bullets: [
+          'Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.',
+        ],
+      },
+      {
+        title:  'Zoo DBMS',
+        href:   'https://github.com/orestis-koutroumpas/ZOO-DBMS',
+        tech:   'Python, SQLite, tkinter · Dec 2023 – Jan 2024',
+        img:    'img/projects/zoo.gif',
+        imgAlt: 'Zoo DBMS GUI screenshot',
+        bullets: [
+          'GUI-based database management system for zoo operations built with Python and SQLite.',
+        ],
+      },
+    ];
+
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
-    projectsSection.innerHTML = `
-    <h2>Projects</h2>
-    <div class="projects-grid">
 
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/eye-tracking-authentication" target="_blank">Eye Tracking Authentication</a></h3>
-        <p class="tech-tag">Python, scikit-learn · Apr 2025 – Dec 2025</p>
-        <ul>
-          <li><em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as a continuous, passive secondary security layer to complement knowledge-based authentication schemes.</li>
-          <li>Engineered feature extraction pipelines from raw gaze data and trained machine learning models, achieving a 1.9\% Equal Error Rate (EER) — a strong result in the biometric authentication literature — using only 12\% of the available training data, demonstrating high data efficiency.</li>
-        </ul>
-      </div>
+    const projGrid = document.createElement('div');
+    projGrid.className = 'projects-grid';
 
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Classic-8-Ball-Pool" target="_blank">Classic 8-Ball Pool</a></h3>
-        <p class="tech-tag">C++, OpenGL · Dec 2024 – Feb 2025</p>
-        <ul>
-          <li>Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.</li>
-        </ul>
-      </div>
+    projects.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
 
-      <div class="project-card">
-        <h3><a href="https://www.figma.com/proto/9p84KSrzTdfuToZyJyjYlX/My-Scanner?node-id=165-7141" target="_blank">MyScanner</a></h3>
-        <p class="tech-tag">Figma · Dec 2024 – Jan 2025</p>
-        <ul>
-          <li>Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.</li>
-          <li>Redesigned workflows from existing apps, improving efficiency by 40%.</li>
-        </ul>
-      </div>
+      // Image — falls back to picsum placeholder if local file not found
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'project-img-wrap';
+      const img = document.createElement('img');
+      img.alt = p.imgAlt;
+      img.src = p.img;
+      img.onerror = function() { this.src = p.imgFallback; this.onerror = null; };
+      imgWrap.appendChild(img);
 
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Gesture-Rock-Paper-Scissors" target="_blank">Gesture Rock Paper Scissors</a></h3>
-        <p class="tech-tag">Python, OpenCV · Dec 2024 – Jan 2025</p>
-        <ul>
-          <li>Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.</li>
-        </ul>
-      </div>
+      // Content
+      const content = document.createElement('div');
+      content.className = 'project-content';
+      content.innerHTML = `
+        <h3><a href="${p.href}" target="_blank">${p.title}</a></h3>
+        <span class="tech-tag">${p.tech}</span>
+        <ul>${p.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      `;
 
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Inpainting" target="_blank">GANs for Inpainting &amp; Reconstruction</a></h3>
-        <p class="tech-tag">Python, NumPy, Matplotlib · Dec 2024</p>
-        <ul>
-          <li>Used a trained GAN to reconstruct MNIST digit '8' from random noise vectors and partial input masks.</li>
-          <li>Optimized latent input via gradient descent to improve reconstruction fidelity.</li>
-        </ul>
-      </div>
+      card.appendChild(imgWrap);
+      card.appendChild(content);
+      projGrid.appendChild(card);
+    });
 
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Mnist-Classifier" target="_blank">MNIST Classifier</a></h3>
-        <p class="tech-tag">Python, NumPy, Matplotlib · Nov 2024</p>
-        <ul>
-          <li>Neural network classifier distinguishing between digits 0 and 8. Achieved 99% accuracy.</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Sudoku-Solver" target="_blank">Sudoku Solver</a></h3>
-        <p class="tech-tag">Python, PuLP · Sep 2024</p>
-        <ul>
-          <li>Engineered a solver using backtracking and linear programming for arbitrary grid sizes.</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Foodies" target="_blank">Foodies</a></h3>
-        <p class="tech-tag">JavaScript, Node.js, Express.js, SQLite · Apr – Jun 2024</p>
-        <ul>
-          <li>Built a full-stack food ordering platform with delivery, cart, and order management using MVC architecture.</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/Numerical-Solution-of-Schrodinger-Equation" target="_blank">Schrödinger Equation Solver</a></h3>
-        <p class="tech-tag">Python, NumPy, Matplotlib · Jan 2024</p>
-        <ul>
-          <li>Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3><a href="https://github.com/orestis-koutroumpas/ZOO-DBMS" target="_blank">Zoo DBMS</a></h3>
-        <p class="tech-tag">Python, SQLite, tkinter · Dec 2023 – Jan 2024</p>
-        <ul>
-          <li>GUI-based database management system for zoo operations.</li>
-        </ul>
-      </div>
-
-    </div>
-    `;
+    projectsSection.innerHTML = '<h2>Projects</h2>';
+    projectsSection.appendChild(projGrid);
     main.appendChild(projectsSection);
 
-    // SKILLS ─────────────────────────────────────────────────────────────────
+    // ── SKILLS ──────────────────────────────────────────────────────────────
     const skillsSection = document.createElement('section');
     skillsSection.setAttribute('id', 'skills');
     skillsSection.innerHTML = `
@@ -260,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <h3>Programming &amp; Technical</h3>
           <ul>
             <li><strong>Languages:</strong> Python, C/C++, Java, JavaScript, HTML/CSS, SQL (PostgreSQL, SQLite), NoSQL (MongoDB)</li>
-            <li><strong>AI &amp ML:</strong> scikit-learn, PyTorch, TensorFlow, OpenCV, WandB, ElevenLabs, LLM Eval, Prompt Engineering</li>
+            <li><strong>AI &amp; ML:</strong> scikit-learn, PyTorch, TensorFlow, OpenCV, WandB, ElevenLabs, LLM Eval, Prompt Engineering</li>
             <li><strong>Data &amp; Cloud Platforms:</strong> Databricks, PostgreSQL, SQLite, ElevenLabs API</li>
             <li><strong>Software &amp; Dev Tools:</strong> Git, GitLab, Jira, VS Code, Visual Studio, Eclipse</li>
             <li><strong>Networking:</strong> CCNA-level knowledge, routing/switching, network architecture</li>
@@ -283,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <h3>Languages</h3>
           <ul>
             <li><strong>Greek:</strong> Native</li>
-            <li><strong>English:</strong> C2 - Michigan Certificate of Proficiency in English</li>
+            <li><strong>English:</strong> C2 — Michigan Certificate of Proficiency in English</li>
           </ul>
         </div>
 
@@ -291,51 +343,85 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     main.appendChild(skillsSection);
 
-    // VOLUNTEERING ───────────────────────────────────────────────────────────
+    // ── VOLUNTEERING ─────────────────────────────────────────────────────────
+    // Each entry has a thumbnail image on the left.
+    // Replace src values with real photos; fallback to picsum placeholders.
+    const activities = [
+      {
+        title:   'Athens NLP 2025 Summer School',
+        sub:     'Participant · Onsite · Sep 2025',
+        img:     'img/volunteering/nlp-summer-school.jfif',
+        imgAlt:  'Athens NLP Summer School',
+        bullets: [
+          'Selected participant in a summer school on Natural Language Processing and artificial intelligence.',
+          'Explored advanced topics including deep learning for NLP, large language models, and recent research.',
+          'Collaborated and networked with an international cohort of students and researchers.',
+        ],
+      },
+      {
+        title:   'Startup Universe 2024',
+        sub:     'Volunteer · Virtual · Nov 2024',
+        img:     'img/volunteering/startup-universe.jfif',
+        imgAlt:  'Startup Universe 2024',
+        bullets: [
+          'Identified and recruited field experts to mentor Greek tech startups.',
+          'Maintained a structured database of recruited experts using Excel.',
+        ],
+      },
+      {
+        title:   'Startup Week Patras 2024',
+        sub:     'Volunteer · Onsite · Oct 2024',
+        img:     'img/volunteering/startup-week.jfif',
+        imgAlt:  'Startup Week Patras 2024',
+        bullets: [
+          'Supported event logistics, including setup, troubleshooting, and participant assistance.',
+          'Facilitated networking sessions between attendees, speakers, and mentors.',
+        ],
+      },
+      {
+        title:   'Soft Skills Academy 6 — Creativity',
+        sub:     'Participant · Onsite · May 2022',
+        img:     'img/volunteering/soft-skills.jpg',
+        imgAlt:  'Soft Skills Academy',
+        bullets: [
+          'Participated in collaborative activities enhancing creativity, problem-solving, and teamwork skills.',
+        ],
+      },
+    ];
+
     const volunteeringSection = document.createElement('section');
     volunteeringSection.setAttribute('id', 'volunteering');
-    volunteeringSection.innerHTML = `
-      <h2>Volunteering &amp; Extracurricular Activities</h2>
-      <div class="volunteering-grid">
 
-        <div class="volunteer-card">
-          <h3>Athens NLP 2025 Summer School</h3>
-          <h4>Participant · Onsite · Sep 2025</h4>
-          <ul>
-            <li>Selected participant in an summer school on Natural Language Processing and artificial intelligence.</li>
-            <li>Explored advanced topics including deep learning for NLP, large language models, and recent research developments.</li>
-            <li>Collaborated and networked with an international cohort of students and researchers.</li>
-          </ul>
-        </div>
+    const volGrid = document.createElement('div');
+    volGrid.className = 'volunteering-grid';
 
-        <div class="volunteer-card">
-          <h3>Startup Universe 2024</h3>
-          <h4>Volunteer · Virtual · Nov 2024</h4>
-          <ul>
-            <li>Identified and recruited field experts to mentor Greek tech startups.</li>
-            <li>Maintained a structured database of recruited experts using Excel.</li>
-          </ul>
-        </div>
+    activities.forEach(a => {
+      const card = document.createElement('div');
+      card.className = 'volunteer-card';
 
-        <div class="volunteer-card">
-          <h3>Startup Week Patras 2024</h3>
-          <h4>Volunteer · Onsite · Oct 2024</h4>
-          <ul>
-            <li>Supported event logistics, including setup, troubleshooting, and participant assistance.</li>
-            <li>Facilitated networking sessions between attendees, speakers, and mentors.</li>
-          </ul>
-        </div>
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'volunteer-img-wrap';
+      const img = document.createElement('img');
+      img.alt = a.imgAlt;
+      img.src = a.img;
+      img.onerror = function() { this.src = a.imgFallback; this.onerror = null; };
+      imgWrap.appendChild(img);
 
-        <div class="volunteer-card">
-          <h3>Soft Skills Academy 6 — Creativity</h3>
-          <h4>Participant · Onsite · May 2022</h4>
-          <ul>
-            <li>Participated in collaborative activities enhancing creativity, problem-solving, and teamwork skills.</li>
-          </ul>
-        </div>
+      const content = document.createElement('div');
+      content.className = 'volunteer-content';
+      content.innerHTML = `
+        <h3>${a.title}</h3>
+        <h4>${a.sub}</h4>
+        <ul>${a.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      `;
 
-      </div>
-    `;
+      card.appendChild(imgWrap);
+      card.appendChild(content);
+      volGrid.appendChild(card);
+    });
+
+    volunteeringSection.innerHTML = '<h2>Volunteering &amp; Extracurricular Activities</h2>';
+    volunteeringSection.appendChild(volGrid);
     main.appendChild(volunteeringSection);
 
     document.body.appendChild(main);
@@ -347,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ── ROUTER ───────────────────────────────────────────────────────────────
     function router() {
-        const hash = window.location.hash || "#about";
+        const hash = window.location.hash || '#about';
         const sections = ['about', 'education', 'experience', 'projects', 'skills', 'volunteering', 'contact'];
 
         sections.forEach(id => {
