@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         title:       'Athens NLP 2025 Summer School',
         sub:         'Participant · Onsite · Sep 2025',
-        img:         'img/volunteering/nlp-summer-school.jpg',
+        img:         'img/volunteering/nlp-summer-school.jfif',
         imgAlt:      'Athens NLP Summer School',
         imgFallback: 'https://picsum.photos/seed/nlpschool/240/168',
         bullets: [
@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         title:       'Startup Universe 2024',
         sub:         'Volunteer · Virtual · Nov 2024',
-        img:         'img/volunteering/startup-universe.jpg',
+        img:         'img/volunteering/startup-universe.jfif',
         imgAlt:      'Startup Universe 2024',
         imgFallback: 'https://picsum.photos/seed/startupuniverse/240/168',
         bullets: [
@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         title:       'Startup Week Patras 2024',
         sub:         'Volunteer · Onsite · Oct 2024',
-        img:         'img/volunteering/startup-week.jpg',
+        img:         'img/volunteering/startup-week.jfif',
         imgAlt:      'Startup Week Patras 2024',
         imgFallback: 'https://picsum.photos/seed/startupweek/240/168',
         bullets: [
