@@ -171,7 +171,7 @@ h2::after {
 }
 
 /* =========================
-   ABOUT — text LEFT, photo RIGHT
+   ABOUT
    ========================= */
 .about-layout {
   display: flex;
@@ -216,7 +216,7 @@ h2::after {
 }
 
 /* =========================
-   CONTACT — centered
+   CONTACT
    ========================= */
 #contact {
   text-align: center;
@@ -238,8 +238,8 @@ h2::after {
   font-size: 0.9rem;
   color: var(--text-secondary);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   gap: 0.6rem;
 }
 

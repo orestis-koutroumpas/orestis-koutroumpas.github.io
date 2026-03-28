@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function() {
         imgAlt: 'Eye Tracking Authentication screenshot',
         imgFallback: 'https://picsum.photos/seed/eyetrack/280/192',
         bullets: [
-          '<em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as an additional security layer to knowledge-based authentication.',          'Achieved a 1.9% Equal Error Rate (EER) using only 12% of the available training data, demonstrating high data efficiency.',
+          '<em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as an additional security layer to knowledge-based authentication.',
           'Achieved a 1.9% Equal Error Rate (EER) using only 12% of the available training data, demonstrating high data efficiency with limited resources.',
         ],
       },
