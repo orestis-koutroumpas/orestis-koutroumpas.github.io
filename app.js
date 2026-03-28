@@ -79,94 +79,153 @@ document.addEventListener("DOMContentLoaded", function() {
     main.appendChild(contactSection);
 
     // ── EDUCATION ───────────────────────────────────────────────────────────
+    // Logo on the left (like LinkedIn), title/school/meta on the right.
+    // entry-meta row: location (left) — date badge (right).
+    const educationEntries = [
+      {
+        logo:        'img/logos/upatras.jpg',
+        logoAlt:     'University of Patras logo',
+        logoFallback:'https://www.upatras.gr/wp-content/uploads/2019/05/upatras_logo.png',
+        degree:      'Diploma in Electrical &amp; Computer Engineering',
+        school:      'University of Patras',
+        location:    'Patras, Greece',
+        date:        'Sep 2020 – Feb 2026',
+        grade:       '8.19 / 10',
+        courses: [
+          'Quantum Computing', 'Quantum Electronics', 'Artificial Intelligence',
+          'Machine Learning', 'Signal Processing', 'Algorithms &amp; Data Structures',
+          'Linear Algebra', 'Probability &amp; Statistics', 'Computer Networks',
+        ],
+      },
+    ];
+
     const educationSection = document.createElement('section');
     educationSection.setAttribute('id', 'education');
-    educationSection.innerHTML = `
-      <h2>Education</h2>
-      <div class="education-grid">
-        <div class="education-card">
-          <h3>Diploma in Electrical &amp; Computer Engineering</h3>
-          <h4>University of Patras — Patras, Greece</h4>
-          <span class="date-tag">Sep 2020 – Feb 2026</span><br>
-          <span class="grade">Grade: 8.19 / 10</span>
+    educationSection.innerHTML = '<h2>Education</h2>';
 
+    const eduGrid = document.createElement('div');
+    eduGrid.className = 'education-grid';
+
+    educationEntries.forEach(e => {
+      const card = document.createElement('div');
+      card.className = 'education-card entry-card';
+      card.innerHTML = `
+        <div class="entry-logo-wrap">
+          <img class="entry-logo" src="${e.logo}" alt="${e.logoAlt}"
+               onerror="this.src='${e.logoFallback}'; this.onerror=null;">
+        </div>
+        <div class="entry-body">
+          <h3>${e.degree}</h3>
+          <h4>${e.school}</h4>
+          <div class="entry-meta">
+            <span class="entry-location">${e.location}</span>
+            <span class="date-tag">${e.date}</span>
+          </div>
+          <span class="grade">Grade: ${e.grade}</span>
           <div class="coursework">
             <span class="coursework-label">Relevant Coursework</span>
             <ul class="coursework-pills">
-              <li>Quantum Computing</li>
-              <li>Quantum Electronics</li>
-              <li>Artificial Intelligence</li>
-              <li>Machine Learning</li>
-              <li>Signal Processing</li>
-              <li>Algorithms &amp; Data Structures</li>
-              <li>Linear Algebra</li>
-              <li>Probability &amp; Statistics</li>
-              <li>Computer Networks</li>
+              ${e.courses.map(c => `<li>${c}</li>`).join('')}
             </ul>
           </div>
         </div>
-      </div>
-    `;
+      `;
+      eduGrid.appendChild(card);
+    });
+
+    educationSection.appendChild(eduGrid);
     main.appendChild(educationSection);
 
     // ── EXPERIENCE ──────────────────────────────────────────────────────────
-    // Date badge matches education style (shared .date-tag)
+    // Same LinkedIn-style layout: logo left, content right,
+    // entry-meta row: location (left) — date badge (right).
+    const experienceEntries = [
+      {
+        logo:        'img/logos/accenture.jfif',
+        logoAlt:     'Accenture logo',
+        logoFallback:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png',
+        title:       'AI / ML Engineer',
+        company:     'Accenture',
+        location:    'Athens, Greece',
+        date:        'Dec 2025 – Present',
+        bullets: [
+          'Developing an enterprise-grade Natural Language to SQL AI assistant for banking users on the Databricks platform, enabling non-technical stakeholders to query large-scale financial datasets in natural language.',
+          'Collaborating with data engineers and business stakeholders to integrate the solution into production-grade analytics workflows, ensuring reliability and scalability.',
+        ],
+      },
+      {
+        logo:        'img/logos/homli.jfif',
+        logoAlt:     'Homli logo',
+        logoFallback:'https://media.licdn.com/dms/image/v2/D4D0BAQHb4_1YwtFVlA/company-logo_200_200/company-logo_200_200/0/1700384634579/homli_logo?e=2147483647&v=beta&t=rXcSc4HiEXW2HW4nREizCjqPvTzNs5w9bBjg44qGGio',
+        title:       'Data Scientist Intern',
+        company:     'Homli',
+        location:    'Athens, Greece',
+        date:        'Jun 2025 – Aug 2025',
+        bullets: [
+          'Expanded the company\'s Automated Valuation Model (AVM) to a new market through feature selection and model optimization.',
+          'Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.',
+          'Built web scrapers for raw data collection, cleaned and processed it, and stored structured datasets in PostgreSQL.',
+        ],
+      },
+      {
+        logo:        'img/logos/chania.png',
+        logoAlt:     'Cooperative Bank of Chania logo',
+        logoFallback:'https://www.synetairistikibank.gr/wp-content/uploads/2021/10/logo.png',
+        title:       'Information Technology Intern',
+        company:     'Cooperative Bank of Chania',
+        location:    'Chania, Greece',
+        date:        'Jul 2023 – Aug 2023',
+        bullets: [
+          'Delivered first-level technical support to end-users, resolving hardware and software issues.',
+          'Diagnosed and addressed system vulnerabilities through regular updates and patches.',
+          'Managed user accounts and permissions to ensure data security and compliance.',
+          'IT infrastructure monitoring and setup (Microsoft 365, Teams, printers, networks, routers, switches, security tools).',
+        ],
+      },
+    ];
+
     const experienceSection = document.createElement('section');
     experienceSection.setAttribute('id', 'experience');
-    experienceSection.innerHTML = `
-      <h2>Experience</h2>
-      <div class="experience-grid">
+    experienceSection.innerHTML = '<h2>Experience</h2>';
 
-        <div class="experience-card">
-          <h3>AI / ML Engineer</h3>
-          <h4>Accenture — Athens, Greece</h4>
-          <span class="date-tag">Dec 2025 – Present</span>
-          <ul>
-            <li>Developing an enterprise-grade Natural Language to SQL AI assistant for banking users on the Databricks platform, enabling non-technical stakeholders to query large-scale financial datasets in natural language.</li>
-            <li>Collaborating with data engineers and business stakeholders to integrate the solution into production-grade analytics workflows, ensuring reliability and scalability.</li>
-          </ul>
+    const expGrid = document.createElement('div');
+    expGrid.className = 'experience-grid';
+
+    experienceEntries.forEach(e => {
+      const card = document.createElement('div');
+      card.className = 'experience-card entry-card';
+      card.innerHTML = `
+        <div class="entry-logo-wrap">
+          <img class="entry-logo" src="${e.logo}" alt="${e.logoAlt}"
+               onerror="this.src='${e.logoFallback}'; this.onerror=null;">
         </div>
-
-        <div class="experience-card">
-          <h3>Data Scientist Intern</h3>
-          <h4>Homli — Athens, Greece</h4>
-          <span class="date-tag">Jun 2025 – Aug 2025</span>
-          <ul>
-            <li>Expanded the company's Automated Valuation Model (AVM) to a new market through feature selection and model optimization.</li>
-            <li>Reviewed company voice agents using LLM-based evaluation metrics and generated new synthetic voices with ElevenLabs.</li>
-            <li>Built web scrapers for raw data collection, cleaned and processed it, and stored structured datasets in PostgreSQL.</li>
-          </ul>
+        <div class="entry-body">
+          <h3>${e.title}</h3>
+          <h4>${e.company}</h4>
+          <div class="entry-meta">
+            <span class="entry-location">${e.location}</span>
+            <span class="date-tag">${e.date}</span>
+          </div>
+          <ul>${e.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
         </div>
+      `;
+      expGrid.appendChild(card);
+    });
 
-        <div class="experience-card">
-          <h3>Information Technology Intern</h3>
-          <h4>Cooperative Bank of Chania — Chania, Greece</h4>
-          <span class="date-tag">Jul 2023 – Aug 2023</span>
-          <ul>
-            <li>Delivered first-level technical support to end-users, resolving hardware and software issues.</li>
-            <li>Diagnosed and addressed system vulnerabilities through regular updates and patches.</li>
-            <li>Managed user accounts and permissions to ensure data security and compliance.</li>
-            <li>IT infrastructure monitoring and setup (Microsoft 365, Teams, printers, networks, routers, switches, security tools).</li>
-          </ul>
-        </div>
-
-      </div>
-    `;
+    experienceSection.appendChild(expGrid);
     main.appendChild(experienceSection);
 
     // ── PROJECTS ────────────────────────────────────────────────────────────
-    // One project per row; each has a thumbnail image on the left.
-    // Replace the src values with your own screenshots.
-    // Placeholder images use picsum.photos with a unique seed per project.
     const projects = [
       {
         title:  'Eye Tracking Authentication',
         href:   'https://github.com/orestis-koutroumpas/eye-tracking-authentication',
         tech:   'Python, scikit-learn · Apr 2025 – Dec 2025',
-        img:    'img/projects/eye_tracking.jpg',       // ← replace with your screenshot
+        img:    'img/projects/eye_tracking.jpg',
         imgAlt: 'Eye Tracking Authentication screenshot',
+        imgFallback: 'https://picsum.photos/seed/eyetrack/280/192',
         bullets: [
-          '<em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as an additional security layer to knowledge-based authentication.',
+          '<em>Diploma Project</em>: Developed a biometric authentication framework leveraging eye-tracking data as an additional security layer to knowledge-based authentication.',          'Achieved a 1.9% Equal Error Rate (EER) using only 12% of the available training data, demonstrating high data efficiency.',
           'Achieved a 1.9% Equal Error Rate (EER) using only 12% of the available training data, demonstrating high data efficiency with limited resources.',
         ],
       },
@@ -176,6 +235,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'C++, OpenGL · Dec 2024 – Feb 2025',
         img:    'img/projects/pool.jpg',
         imgAlt: '8-Ball Pool game screenshot',
+        imgFallback: 'https://picsum.photos/seed/billiards/280/192',
         bullets: [
           'Designed and implemented a 3D billiards game with realistic physics, dynamic lighting, and real-time shadow rendering.',
         ],
@@ -186,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Figma · Dec 2024 – Jan 2025',
         img:    'img/projects/my_scanner.jpg',
         imgAlt: 'MyScanner Figma prototype',
+        imgFallback: 'https://picsum.photos/seed/scanner/280/192',
         bullets: [
           'Prototyped a mobile document scanning app focused on UX accessibility and minimal interface friction.',
           'Redesigned workflows from existing apps, improving efficiency by 40%.',
@@ -197,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, OpenCV · Dec 2024 – Jan 2025',
         img:    'img/projects/rps.jpg',
         imgAlt: 'Gesture Rock Paper Scissors screenshot',
+        imgFallback: 'https://picsum.photos/seed/rps/280/192',
         bullets: [
           'Created a real-time game using hand gesture recognition, integrating haptic and visual feedback.',
         ],
@@ -207,6 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, NumPy, Matplotlib · Dec 2024',
         img:    'img/projects/gans.png',
         imgAlt: 'GAN inpainting result',
+        imgFallback: 'https://picsum.photos/seed/gans/280/192',
         bullets: [
           'Used a trained GAN to reconstruct MNIST digit "8" from random noise vectors and partial input masks.',
           'Optimized latent input via gradient descent to improve reconstruction fidelity.',
@@ -218,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, NumPy, Matplotlib · Nov 2024',
         img:    'img/projects/mnist.png',
         imgAlt: 'MNIST Classifier output',
+        imgFallback: 'https://picsum.photos/seed/mnist/280/192',
         bullets: [
           'Neural network classifier distinguishing between digits 0 and 8. Achieved 99% accuracy.',
         ],
@@ -228,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, PuLP · Sep 2024',
         img:    'img/projects/sudoku.jpg',
         imgAlt: 'Sudoku Solver screenshot',
+        imgFallback: 'https://picsum.photos/seed/sudoku/280/192',
         bullets: [
           'Engineered a solver using backtracking and linear programming for arbitrary grid sizes.',
         ],
@@ -236,8 +301,9 @@ document.addEventListener("DOMContentLoaded", function() {
         title:  'Foodies',
         href:   'https://github.com/orestis-koutroumpas/Foodies',
         tech:   'JavaScript, Node.js, Express.js, SQLite · Apr – Jun 2024',
-        img:    'img/projects/small_demo.gif',
+        img:    'img/projects/foodies.gif',
         imgAlt: 'Foodies platform screenshot',
+        imgFallback: 'https://picsum.photos/seed/foodies/280/192',
         bullets: [
           'Built a full-stack food ordering platform with delivery, cart, and order management using MVC architecture.',
         ],
@@ -248,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, NumPy, Matplotlib · Jan 2024',
         img:    'img/projects/schrodinger.png',
         imgAlt: 'Schrödinger solver plot',
+        imgFallback: 'https://picsum.photos/seed/schrodinger/280/192',
         bullets: [
           'Implemented a numerical solver for the 1D time-independent Schrödinger equation using finite-difference methods.',
         ],
@@ -258,6 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tech:   'Python, SQLite, tkinter · Dec 2023 – Jan 2024',
         img:    'img/projects/zoo.gif',
         imgAlt: 'Zoo DBMS GUI screenshot',
+        imgFallback: 'https://picsum.photos/seed/zoodbms/280/192',
         bullets: [
           'GUI-based database management system for zoo operations built with Python and SQLite.',
         ],
@@ -266,7 +334,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
-
     const projGrid = document.createElement('div');
     projGrid.className = 'projects-grid';
 
@@ -274,7 +341,6 @@ document.addEventListener("DOMContentLoaded", function() {
       const card = document.createElement('div');
       card.className = 'project-card';
 
-      // Image — falls back to picsum placeholder if local file not found
       const imgWrap = document.createElement('div');
       imgWrap.className = 'project-img-wrap';
       const img = document.createElement('img');
@@ -283,7 +349,6 @@ document.addEventListener("DOMContentLoaded", function() {
       img.onerror = function() { this.src = p.imgFallback; this.onerror = null; };
       imgWrap.appendChild(img);
 
-      // Content
       const content = document.createElement('div');
       content.className = 'project-content';
       content.innerHTML = `
@@ -307,7 +372,6 @@ document.addEventListener("DOMContentLoaded", function() {
     skillsSection.innerHTML = `
       <h2>Skills</h2>
       <div class="skills-grid">
-
         <div class="skill-card">
           <h3>Programming &amp; Technical</h3>
           <ul>
@@ -319,7 +383,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><strong>Scientific &amp; Other Tools:</strong> MATLAB, Autodesk AutoCAD, Figma</li>
           </ul>
         </div>
-
         <div class="skill-card">
           <h3>Engineering &amp; Scientific</h3>
           <ul>
@@ -330,7 +393,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <li>Computer science fundamentals: data structures, algorithms (DSA), and software engineering.</li>
           </ul>
         </div>
-
         <div class="skill-card">
           <h3>Languages</h3>
           <ul>
@@ -338,20 +400,18 @@ document.addEventListener("DOMContentLoaded", function() {
             <li><strong>English:</strong> C2 — Michigan Certificate of Proficiency in English</li>
           </ul>
         </div>
-
       </div>
     `;
     main.appendChild(skillsSection);
 
     // ── VOLUNTEERING ─────────────────────────────────────────────────────────
-    // Each entry has a thumbnail image on the left.
-    // Replace src values with real photos; fallback to picsum placeholders.
     const activities = [
       {
-        title:   'Athens NLP 2025 Summer School',
-        sub:     'Participant · Onsite · Sep 2025',
-        img:     'img/volunteering/nlp-summer-school.jfif',
-        imgAlt:  'Athens NLP Summer School',
+        title:       'Athens NLP 2025 Summer School',
+        sub:         'Participant · Onsite · Sep 2025',
+        img:         'img/volunteering/nlp-summer-school.jpg',
+        imgAlt:      'Athens NLP Summer School',
+        imgFallback: 'https://picsum.photos/seed/nlpschool/240/168',
         bullets: [
           'Selected participant in a summer school on Natural Language Processing and artificial intelligence.',
           'Explored advanced topics including deep learning for NLP, large language models, and recent research.',
@@ -359,30 +419,33 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
       },
       {
-        title:   'Startup Universe 2024',
-        sub:     'Volunteer · Virtual · Nov 2024',
-        img:     'img/volunteering/startup-universe.jfif',
-        imgAlt:  'Startup Universe 2024',
+        title:       'Startup Universe 2024',
+        sub:         'Volunteer · Virtual · Nov 2024',
+        img:         'img/volunteering/startup-universe.jpg',
+        imgAlt:      'Startup Universe 2024',
+        imgFallback: 'https://picsum.photos/seed/startupuniverse/240/168',
         bullets: [
           'Identified and recruited field experts to mentor Greek tech startups.',
           'Maintained a structured database of recruited experts using Excel.',
         ],
       },
       {
-        title:   'Startup Week Patras 2024',
-        sub:     'Volunteer · Onsite · Oct 2024',
-        img:     'img/volunteering/startup-week.jfif',
-        imgAlt:  'Startup Week Patras 2024',
+        title:       'Startup Week Patras 2024',
+        sub:         'Volunteer · Onsite · Oct 2024',
+        img:         'img/volunteering/startup-week.jpg',
+        imgAlt:      'Startup Week Patras 2024',
+        imgFallback: 'https://picsum.photos/seed/startupweek/240/168',
         bullets: [
           'Supported event logistics, including setup, troubleshooting, and participant assistance.',
           'Facilitated networking sessions between attendees, speakers, and mentors.',
         ],
       },
       {
-        title:   'Soft Skills Academy 6 — Creativity',
-        sub:     'Participant · Onsite · May 2022',
-        img:     'img/volunteering/soft-skills.jpg',
-        imgAlt:  'Soft Skills Academy',
+        title:       'Soft Skills Academy 6 — Creativity',
+        sub:         'Participant · Onsite · May 2022',
+        img:         'img/volunteering/soft-skills.jpg',
+        imgAlt:      'Soft Skills Academy',
+        imgFallback: 'https://picsum.photos/seed/softskills/240/168',
         bullets: [
           'Participated in collaborative activities enhancing creativity, problem-solving, and teamwork skills.',
         ],
@@ -391,7 +454,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const volunteeringSection = document.createElement('section');
     volunteeringSection.setAttribute('id', 'volunteering');
-
     const volGrid = document.createElement('div');
     volGrid.className = 'volunteering-grid';
 
