@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ── HEADER ──────────────────────────────────────────────────────────────
     const header = document.createElement('header');
-    header.innerHTML = `<h1>Orestis <span>Koutroumpas</span></h1>`;
+    header.innerHTML = `<h1>Orestis Koutroumpas</h1>`;
 
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
