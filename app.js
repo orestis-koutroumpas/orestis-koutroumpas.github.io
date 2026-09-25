@@ -69,8 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <h2>Contact Me</h2>
       <div class="contact-grid">
         <div class="contact-card">
-          <p><span class="contact-label">Email</span><a href="mailto:o.koutroubas@gmail.com">o.koutroubas@gmail.com</a></p>
-          <p><span class="contact-label">Phone</span>+30 6971964537</p>
           <p><span class="contact-label">GitHub</span><a href="https://github.com/orestis-koutroumpas" target="_blank">github.com/orestis-koutroumpas</a></p>
           <p><span class="contact-label">LinkedIn</span><a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248" target="_blank">linkedin.com/in/orestis-koutroumpas</a></p>
         </div>
