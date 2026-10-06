@@ -531,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         title:       'TUC Space Summer School 2026',
         sub:         'Participant · Onsite, Chania · 4–12 Jul 2026',
-        img:         'img/volunteering/tuc-space-summer-school.jpg',
+        img:         'img/volunteering/tuc-space-summer-school.png',
         imgAlt:      'TUC Space Summer School 2026',
         imgFallback: 'https://picsum.photos/seed/tucspace/240/168',
         bullets: [
