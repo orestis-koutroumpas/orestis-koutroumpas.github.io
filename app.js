@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     document.documentElement.setAttribute('lang', 'en');
     document.head.innerHTML = `
         <meta charset="UTF-8">
@@ -12,18 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // ── HEADER ──────────────────────────────────────────────────────────────
     const header = document.createElement('header');
     header.innerHTML = `<h1>Orestis Koutroumpas</h1>`;
-
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
     const navItems = [
-        { href: '#about',        text: 'About' },
-        { href: '#education',    text: 'Education' },
-        { href: '#experience',   text: 'Experience' },
-        { href: '#projects',     text: 'Projects' },
-        { href: '#skills',       text: 'Skills' },
-        { href: '#volunteering', text: 'Volunteering' },
+        { href: '#about',          text: 'About' },
+        { href: '#education',      text: 'Education' },
+        { href: '#experience',     text: 'Experience' },
+        { href: '#publications',   text: 'Publications' },
+        { href: '#projects',       text: 'Projects' },
+        { href: '#certifications', text: 'Certifications' },
+        { href: '#skills',         text: 'Skills' },
+        { href: '#volunteering',   text: 'Volunteering' },
     ];
-
+ 
     navItems.forEach(item => {
         const li = document.createElement('li');
         const a  = document.createElement('a');
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ── MAIN ────────────────────────────────────────────────────────────────
     const main = document.createElement('main');
-
+    
     // ── ABOUT ───────────────────────────────────────────────────────────────
     const aboutSection = document.createElement('section');
     aboutSection.setAttribute('id', 'about');
@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="about-layout">
         <div class="about-bio">
           <p>
-            Electrical and Computer Engineering graduate with hands-on industry experience in AI/ML
-            engineering and data science, including production-grade NLP and LLM systems at Accenture
-            and real estate AVM development at Homli. Strong foundations in machine learning, and
-            software engineering, complemented by a diploma thesis on biometric authentication using
-            eye-tracking data. Passionate about the intersection of quantum theory and artificial
-            intelligence, and eager to deepen expertise through advanced postgraduate research.
+            AI/ML Engineer at Accenture and MSc student in Artificial Intelligence at NCSR Demokritos,
+            with a background in Electrical and Computer Engineering. Hands-on experience building LLM
+            applications for the banking sector on Databricks, including a RAG application built with
+            the Claude SDK and multiple Natural Language to SQL assistants. Strong foundations in
+            artificial intelligence, machine learning, and software engineering, complemented by a
+            journal paper on gaze-based biometric authentication currently under review at IEEE Access.
           </p>
         </div>
         <div class="about-photo-wrap">
@@ -69,17 +69,30 @@ document.addEventListener("DOMContentLoaded", function() {
       <h2>Contact Me</h2>
       <div class="contact-grid">
         <div class="contact-card">
-          <p><span class="contact-label">GitHub</span><a href="https://github.com/orestis-koutroumpas" target="_blank">github.com/orestis-koutroumpas</a></p>
-          <p><span class="contact-label">LinkedIn</span><a href="https://linkedin.com/in/orestis-koutroumpas-7270b9248" target="_blank">linkedin.com/in/orestis-koutroumpas</a></p>
+          <p><span class="contact-label">GitHub</span><a href=https://github.com/orestis-koutroumpas target="_blank">github.com/orestis-koutroumpas</a></p>
+          <p><span class="contact-label">LinkedIn</span><a href=https://linkedin.com/in/orestis-koutroumpas-7270b9248 target="_blank">linkedin.com/in/orestis-koutroumpas</a></p>
         </div>
       </div>
     `;
     main.appendChild(contactSection);
-
+    
     // ── EDUCATION ───────────────────────────────────────────────────────────
     // Logo on the left (like LinkedIn), title/school/meta on the right.
     // entry-meta row: location (left) — date badge (right).
     const educationEntries = [
+      {
+        logo:        'img/logos/ncsr.png',
+        logoAlt:     'NCSR Demokritos logo',
+        logoFallback:'https://placehold.co/120x120?text=NCSR',
+        degree:      'MSc in Artificial Intelligence',
+        school:      'NCSR Demokritos',
+        location:    'Athens, Greece',
+        date:        'Oct 2026 – Present',
+        courses: [
+          'Multiagent Systems', 'AI Applications', 'Natural Language Processing',
+          'Deep Learning', 'Machine Learning', 'Robotics', 'Ethics in AI',
+        ],
+      },
       {
         logo:        'img/logos/upatras.jpg',
         logoAlt:     'University of Patras logo',
@@ -90,20 +103,17 @@ document.addEventListener("DOMContentLoaded", function() {
         date:        'Sep 2020 – Feb 2026',
         grade:       '8.19 / 10',
         courses: [
-          'Quantum Computing', 'Quantum Electronics', 'Artificial Intelligence',
-          'Machine Learning', 'Signal Processing', 'Algorithms &amp; Data Structures',
+          'Artificial Intelligence', 'Machine Learning', 'Quantum Computers',
+          'Quantum Electronics', 'Signal Processing', 'Algorithms &amp; Data Structures',
           'Linear Algebra', 'Probability &amp; Statistics', 'Computer Networks',
         ],
       },
     ];
-
     const educationSection = document.createElement('section');
     educationSection.setAttribute('id', 'education');
     educationSection.innerHTML = '<h2>Education</h2>';
-
     const eduGrid = document.createElement('div');
     eduGrid.className = 'education-grid';
-
     educationEntries.forEach(e => {
       const card = document.createElement('div');
       card.className = 'education-card entry-card';
@@ -119,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <span class="entry-location">${e.location}</span>
             <span class="date-tag">${e.date}</span>
           </div>
-          <span class="grade">Grade: ${e.grade}</span>
+          ${e.grade ? `<span class="grade">Grade: ${e.grade}</span>` : ''}
           <div class="coursework">
             <span class="coursework-label">Relevant Coursework</span>
             <ul class="coursework-pills">
@@ -130,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function() {
       `;
       eduGrid.appendChild(card);
     });
-
     educationSection.appendChild(eduGrid);
     main.appendChild(educationSection);
 
@@ -147,8 +156,9 @@ document.addEventListener("DOMContentLoaded", function() {
         location:    'Athens, Greece',
         date:        'Dec 2025 – Present',
         bullets: [
-          'Developing an enterprise-grade Natural Language to SQL AI assistant for banking users on the Databricks platform, enabling non-technical stakeholders to query large-scale financial datasets in natural language.',
-          'Collaborating with data engineers and business stakeholders to integrate the solution into production-grade analytics workflows, ensuring reliability and scalability.',
+          'Developing a Retrieval-Augmented Generation (RAG) application for banking users on Databricks using Python and the Claude SDK.',
+          'Developed multiple Natural Language to SQL AI assistants deployed in production on Databricks, enabling non-technical stakeholders to query large-scale financial datasets without writing SQL.',
+          'Working with state-of-the-art AI tooling (Claude SDK, Claude Code) and collaborating closely with cross-functional teams and business stakeholders.',
         ],
       },
       {
@@ -181,14 +191,14 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
       },
     ];
-
+ 
     const experienceSection = document.createElement('section');
     experienceSection.setAttribute('id', 'experience');
     experienceSection.innerHTML = '<h2>Experience</h2>';
-
+ 
     const expGrid = document.createElement('div');
     expGrid.className = 'experience-grid';
-
+ 
     experienceEntries.forEach(e => {
       const card = document.createElement('div');
       card.className = 'experience-card entry-card';
@@ -209,10 +219,66 @@ document.addEventListener("DOMContentLoaded", function() {
       `;
       expGrid.appendChild(card);
     });
-
+ 
     experienceSection.appendChild(expGrid);
     main.appendChild(experienceSection);
-
+ 
+    // ── PUBLICATIONS ────────────────────────────────────────────────────────
+    // Same card layout as Experience: venue logo left, details right,
+    // entry-meta row: publication type (left) — status badge (right).
+    // If img/logos/ieee.png is missing, the existing University of Patras logo is shown.
+    const publications = [
+      {
+        logo:        'img/logos/ieee.png',
+        logoAlt:     'IEEE Access logo',
+        logoFallback:'img/logos/upatras.jpg',
+        title:       'Gaze-based Biometrics for Multifactor Authentication: How many enrollment trials are enough for reliable Impostor Rejection',
+        venue:       'IEEE Access',
+        type:        'Journal article',
+        status:      'Under Review',
+        bullets: [
+          '<em>Based on my Diploma Thesis</em>: Developed a biometric authentication framework leveraging eye-tracking data as a continuous, passive secondary security layer to complement knowledge-based authentication schemes.',
+          'Engineered feature extraction pipelines from raw gaze data and trained machine learning models, achieving a mean Equal Error Rate (EER) of 4.22% using only 15% of the available training data, demonstrating high data efficiency.',
+        ],
+        links: [
+          { text: 'Code on GitHub', href: 'https://github.com/orestis-koutroumpas/eye-tracking-authentication' },
+          // { text: 'Read the paper', href: 'https://doi.org/...' },   // add once it is published
+        ],
+      },
+    ];
+ 
+    const publicationsSection = document.createElement('section');
+    publicationsSection.setAttribute('id', 'publications');
+    publicationsSection.innerHTML = '<h2>Publications</h2>';
+ 
+    const pubGrid = document.createElement('div');
+    pubGrid.className = 'publications-grid experience-grid';
+ 
+    publications.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'publication-card experience-card entry-card';
+      card.innerHTML = `
+        <div class="entry-logo-wrap">
+          <img class="entry-logo" src="${p.logo}" alt="${p.logoAlt}"
+               onerror="this.src='${p.logoFallback}'; this.onerror=null;">
+        </div>
+        <div class="entry-body">
+          <h3>${p.title}</h3>
+          <h4><em>${p.venue}</em></h4>
+          <div class="entry-meta">
+            <span class="entry-location">${p.type}</span>
+            <span class="date-tag">${p.status}</span>
+          </div>
+          <ul>${p.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+          ${p.links.length ? `<p class="publication-links">${p.links.map(l => `<a href="${l.href}" target="_blank">${l.text}</a>`).join(' · ')}</p>` : ''}
+        </div>
+      `;
+      pubGrid.appendChild(card);
+    });
+ 
+    publicationsSection.appendChild(pubGrid);
+    main.appendChild(publicationsSection);
+ 
     // ── PROJECTS ────────────────────────────────────────────────────────────
     const projects = [
       {
@@ -329,16 +395,16 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
       },
     ];
-
+ 
     const projectsSection = document.createElement('section');
     projectsSection.setAttribute('id', 'projects');
     const projGrid = document.createElement('div');
     projGrid.className = 'projects-grid';
-
+ 
     projects.forEach(p => {
       const card = document.createElement('div');
       card.className = 'project-card';
-
+ 
       const imgWrap = document.createElement('div');
       imgWrap.className = 'project-img-wrap';
       const img = document.createElement('img');
@@ -346,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function() {
       img.src = p.img;
       img.onerror = function() { this.src = p.imgFallback; this.onerror = null; };
       imgWrap.appendChild(img);
-
+ 
       const content = document.createElement('div');
       content.className = 'project-content';
       content.innerHTML = `
@@ -354,16 +420,74 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="tech-tag">${p.tech}</span>
         <ul>${p.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
       `;
-
+ 
       card.appendChild(imgWrap);
       card.appendChild(content);
       projGrid.appendChild(card);
     });
-
+ 
     projectsSection.innerHTML = '<h2>Projects</h2>';
     projectsSection.appendChild(projGrid);
     main.appendChild(projectsSection);
 
+    // ── CERTIFICATIONS ──────────────────────────────────────────────────────
+    // Same card layout: badge left, details right,
+    // entry-meta row: issue date (left) — validity badge (right).
+    // Fill credentialUrl with the verification link to show a "Verify credential" link.
+    const certifications = [
+      {
+        badge:        'img/certifications/databricks.png',
+        badgeAlt:     'Databricks Certified Generative AI Engineer Associate badge',
+        badgeFallback:'https://placehold.co/120x120?text=Databricks',
+        name:         'Databricks Certified Generative AI Engineer Associate',
+        issuer:       'Databricks',
+        issued:       'May 2026',
+        expires:      'May 2028',
+        credentialUrl:'',
+      },
+      {
+        badge:        'img/certifications/claude.png',
+        badgeAlt:     'Claude Certified Architect – Foundations badge',
+        badgeFallback:'https://placehold.co/120x120?text=Claude',
+        name:         'Claude Certified Architect – Foundations',
+        issuer:       'Anthropic',
+        issued:       'Oct 2026',
+        expires:      'Oct 2027',
+        credentialUrl:'',
+      },
+    ];
+ 
+    const certificationsSection = document.createElement('section');
+    certificationsSection.setAttribute('id', 'certifications');
+    certificationsSection.innerHTML = '<h2>Certifications</h2>';
+ 
+    const certGrid = document.createElement('div');
+    certGrid.className = 'certifications-grid experience-grid';
+ 
+    certifications.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'certification-card entry-card';
+      card.innerHTML = `
+        <div class="entry-logo-wrap">
+          <img class="entry-logo" src="${c.badge}" alt="${c.badgeAlt}"
+               onerror="this.src='${c.badgeFallback}'; this.onerror=null;">
+        </div>
+        <div class="entry-body">
+          <h3>${c.name}</h3>
+          <h4>${c.issuer}</h4>
+          <div class="entry-meta">
+            <span class="entry-location">Issued ${c.issued}</span>
+            <span class="date-tag">Valid until ${c.expires}</span>
+          </div>
+          ${c.credentialUrl ? `<p class="credential-link"><a href="${c.credentialUrl}" target="_blank">Verify credential</a></p>` : ''}
+        </div>
+      `;
+      certGrid.appendChild(card);
+    });
+ 
+    certificationsSection.appendChild(certGrid);
+    main.appendChild(certificationsSection);
+ 
     // ── SKILLS ──────────────────────────────────────────────────────────────
     const skillsSection = document.createElement('section');
     skillsSection.setAttribute('id', 'skills');
@@ -401,9 +525,20 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     `;
     main.appendChild(skillsSection);
-
+ 
     // ── VOLUNTEERING ─────────────────────────────────────────────────────────
     const activities = [
+      {
+        title:       'TUC Space Summer School 2026',
+        sub:         'Participant · Onsite, Chania · 4–12 Jul 2026',
+        img:         'img/volunteering/tuc-space-summer-school.jpg',
+        imgAlt:      'TUC Space Summer School 2026',
+        imgFallback: 'https://picsum.photos/seed/tucspace/240/168',
+        bullets: [
+          'Attended nine days of expert lectures and hands-on workshops on space engineering, Earth observation, space robotics, space mining, and space law.',
+          'Networked with students, researchers, and space-industry professionals from around the world at the school\'s first international edition.',
+        ],
+      },
       {
         title:       'Athens NLP 2025 Summer School',
         sub:         'Participant · Onsite · Sep 2025',
@@ -449,16 +584,16 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
       },
     ];
-
+ 
     const volunteeringSection = document.createElement('section');
     volunteeringSection.setAttribute('id', 'volunteering');
     const volGrid = document.createElement('div');
     volGrid.className = 'volunteering-grid';
-
+ 
     activities.forEach(a => {
       const card = document.createElement('div');
       card.className = 'volunteer-card';
-
+ 
       const imgWrap = document.createElement('div');
       imgWrap.className = 'volunteer-img-wrap';
       const img = document.createElement('img');
@@ -466,7 +601,7 @@ document.addEventListener("DOMContentLoaded", function() {
       img.src = a.img;
       img.onerror = function() { this.src = a.imgFallback; this.onerror = null; };
       imgWrap.appendChild(img);
-
+ 
       const content = document.createElement('div');
       content.className = 'volunteer-content';
       content.innerHTML = `
@@ -474,28 +609,28 @@ document.addEventListener("DOMContentLoaded", function() {
         <h4>${a.sub}</h4>
         <ul>${a.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
       `;
-
+ 
       card.appendChild(imgWrap);
       card.appendChild(content);
       volGrid.appendChild(card);
     });
-
+ 
     volunteeringSection.innerHTML = '<h2>Volunteering &amp; Extracurricular Activities</h2>';
     volunteeringSection.appendChild(volGrid);
     main.appendChild(volunteeringSection);
-
+ 
     document.body.appendChild(main);
-
+ 
     // ── FOOTER ───────────────────────────────────────────────────────────────
     const footer = document.createElement('footer');
     footer.innerHTML = '<p>&copy; 2026 Orestis Koutroumpas</p>';
     document.body.appendChild(footer);
-
+ 
     // ── ROUTER ───────────────────────────────────────────────────────────────
     function router() {
         const hash = window.location.hash || '#about';
-        const sections = ['about', 'education', 'experience', 'projects', 'skills', 'volunteering', 'contact'];
-
+        const sections = ['about', 'education', 'experience', 'publications', 'projects', 'certifications', 'skills', 'volunteering', 'contact'];
+ 
         sections.forEach(id => {
             const section = document.getElementById(id);
             if (!section) return;
@@ -504,8 +639,8 @@ document.addEventListener("DOMContentLoaded", function() {
             section.style.display = show ? 'block' : 'none';
         });
     }
-
+ 
     router();
     window.addEventListener('hashchange', router);
-
+ 
 });
