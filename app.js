@@ -546,7 +546,6 @@ document.addEventListener("DOMContentLoaded", function() {
         imgAlt:      'Athens NLP Summer School',
         imgFallback: 'https://picsum.photos/seed/nlpschool/240/168',
         bullets: [
-          'Selected participant in a summer school on Natural Language Processing and artificial intelligence.',
           'Explored advanced topics including deep learning for NLP, large language models, and recent research.',
           'Collaborated and networked with an international cohort of students and researchers.',
         ],
